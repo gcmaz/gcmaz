@@ -1,0 +1,11 @@
+gcm_homepage:
+    pattern:  /
+    defaults: { _controller: GcmazMainBundle:Page:index }
+
+gcm_contact:
+    path: /contact/great-circle-media
+    defaults: { _controller: GcmazMainBundle:Page:contact }
+    
+gcm_login:
+    path: /login
+    defaults: { _controller: GcmazMainBundle:Page:login }

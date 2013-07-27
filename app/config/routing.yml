@@ -1,0 +1,7 @@
+gcmaz_main:
+    resource: "@GcmazMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+gcmaz_user:
+    resource: "@GcmazUserBundle/Resources/config/routing.yml"
+    prefix:   /login

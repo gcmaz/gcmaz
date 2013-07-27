@@ -1,0 +1,21 @@
+/web/bundles/
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/vendor/
+/app/config/parameters.yml
+/web/old/
+# Netbeans Specific #
+/nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+# Class Files #
+*.class
+# Package Files #
+*.jar
+*.war
+*.ear

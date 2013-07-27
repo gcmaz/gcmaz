@@ -1,0 +1,7 @@
+parameters:
+#    gcmaz_user.example.class: Gcmaz\UserBundle\Example
+
+services:
+#    gcmaz_user.example:
+#        class: %gcmaz_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

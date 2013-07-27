@@ -1,0 +1,141 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Great Circle Media Arizona{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Great Circle Media Arizona" />
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="Great Circle Media, Great Circle Radio"  />
+{% endblock %}
+    
+{% block favicons %}
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+    <link rel="icon" href="{{ asset('favicon.png') }}">
+    <!--[if IE]><link rel="shortcut icon" href="{{ asset('favicon.ico') }}"><![endif]-->
+    <!-- or, set /favicon.ico for IE10 win -->
+    <meta name="msapplication-TileColor" content="#4c4c4c">
+    <meta name="msapplication-TileImage" content="{{ asset('favicon.png') }}">
+{% endblock %}
+    
+{% block styles %}
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/styles.css') }}" />
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/styles.tweet.css') }}" />
+    <link href='http://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+{% endblock %}
+    
+{% block ie_crap %}
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {filter: none;}
+  </style>
+<![endif]-->
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+{% endblock %}
+
+{% block js_top %}
+    <script type="text/javascript" src="{{ asset('scripts/jquery-1.9.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('scripts/common.js') }}"></script>
+{% endblock %}
+    
+{% block analytics %}
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-38877504-1']);
+        _gaq.push(['_setDomainName', 'gcmaz.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+{% endblock %}
+      
+{% block menubar %}
+    <nav class="menu_box">
+        {#<ul class="dropdown">
+            <li class="headlink">
+                <a href="{{ path('gcm_homepage') }}">GREAT CIRCLE MEDIA</a>
+            </li>
+        </ul>
+        <ul class="dropdown">
+              <li class="headlink">
+                  <a href="{{ path('gcm_contact') }}">CONTACT US</a>
+              </li>
+          </ul>#}
+          {#<ul class="dropdown">
+              <li class="headlink">
+                  <a href="#">RADIO STATIONS</a>
+                  <ul>
+                      <li><a href="http://kaff.gcmaz.com">92.9 KAFF Country</a></li>
+                      <li><a href="http://939themountain.gcmaz.com">The New 93.9 The Mountain</a></li>
+                      <li><a href="http://country935.gcmaz.com">Flagstaff Country 93-5/AM 930</a></li>
+                      <li><a href="http://hits106.gcmaz.com">Hits 106</a></li>
+                      <li><a href="http://magic991.gcmaz.com">Magic 99.1</a></li>
+                      <li><a href="http://funoldies.gcmaz.com">Fun Oldies</a></li>
+                  </ul>
+              </li>
+          </ul>#}
+          <a href="{{ path('gcm_login') }}" class="login">LOGIN</a>
+      </nav>
+{% endblock %}
+      
+{% block leftcol_logo %}
+        <div class="logo_box">
+            <a href="{{ path('gcm_homepage') }}"><img src="{{ asset('images/logo-gcmaz.png') }}" width="300" height="108" alt="Great Circle Media Arizona" ></a>
+        </div>
+{% endblock %}
+
+{% block footer %}
+    <div id="ftr-left">
+            {#<ul class="ftr-links-list">
+            <li style="background-image:url('/images/ftr-icon-home.png');"><a href="{{ path('gcm_homepage') }}">Home</a></li>
+            <li style="background-image:url('/images/ftr-icon-contact.png');"><a href="{{ path('gcm_contact') }}">Contact Us</a></li>
+        </ul>#}
+    </div>
+    <div id="ftr-right">
+        <div id="ftr-right-1">
+        </div>
+        <div id="ftr-right-2">
+            <p class="unica" style="color:#79818b;font-size: 0.9em;padding-top:10px;">CITIES WE SERVE</p>
+            <div style="margin-top:5px;">
+                <ul class="ftr-cities-list" style="float:left;width:90px;">
+                    <li>Flagstaff</li>
+                    <li>Prescott</li>
+                    <li>Sedona</li>
+                    <li>Williams</li>
+                </ul>
+                <ul class="ftr-cities-list" style="float:right;width:140px;text-align:left;">
+                    <li>Cottonwood</li>
+                    <li>Camp Verde</li>
+                    <li>Prescott Valley</li>
+                    <li>Winslow</li>
+                </ul>
+                <br class="clear" />
+            </div>
+        </div>
+        <div id="ftr-right-3">
+            <a href="/"><img src="{{ asset('images/ftr-gcmaz-logo.png') }}" width="167" height="70" alt="Great Circle Media Arizona" style="padding-top:4px;"/></a>
+            <p style="color:#c7d1e1;font-size:12px;font-weight:bold;padding:0;margin:2px auto 0;">
+                Great Circle Media
+            </p>
+            <p style="color:#79818b;font-size:10px;font-weight:bold;padding:0;margin:2px auto;line-height:1.1;">
+                    &copy; GuyAnn Corporation<br/>All Rights Reserved
+            </p>
+            <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
+                <a href="http://www.gcmaz.com/legal/GeneralContestRules.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">Contest Rules</a>
+                &nbsp; | &nbsp;
+                <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
+            </p>
+        </div>
+        <div id="ftr-right-4">
+            <br/>
+        </div>
+    </div>
+    <br class="clear" />
+{% endblock %}
