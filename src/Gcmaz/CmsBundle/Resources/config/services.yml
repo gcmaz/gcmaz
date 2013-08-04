@@ -1,0 +1,6 @@
+services:
+    gcmaz.cms.admin.concert:
+        class: Gcmaz\CmsBundle\Admin\ConcertAdmin
+        arguments: ['', Gcmaz\CmsBundle\Entity\Concert, 'SonataAdminBundle:CRUD', '@service_container']
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Concert Listings, label: Concerts }

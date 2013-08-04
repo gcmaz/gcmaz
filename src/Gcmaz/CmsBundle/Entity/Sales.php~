@@ -1,0 +1,244 @@
+<?php
+
+namespace Gcmaz\CmsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Sales
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\SalesRepository")
+ */
+class Sales
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name_first", type="string", length=20)
+     */
+    private $nameFirst;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name_last", type="string", length=30)
+     */
+    private $nameLast;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="phone_cell", type="string", length=20)
+     */
+    private $phoneCell;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="phone_desk", type="string", length=20)
+     */
+    private $phoneDesk;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=40)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fax", type="string", length=20)
+     */
+    private $fax;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="locale", type="string", length=30)
+     */
+    private $locale;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nameFirst
+     *
+     * @param string $nameFirst
+     * @return Sales
+     */
+    public function setNameFirst($nameFirst)
+    {
+        $this->nameFirst = $nameFirst;
+    
+        return $this;
+    }
+
+    /**
+     * Get nameFirst
+     *
+     * @return string 
+     */
+    public function getNameFirst()
+    {
+        return $this->nameFirst;
+    }
+
+    /**
+     * Set nameLast
+     *
+     * @param string $nameLast
+     * @return Sales
+     */
+    public function setNameLast($nameLast)
+    {
+        $this->nameLast = $nameLast;
+    
+        return $this;
+    }
+
+    /**
+     * Get nameLast
+     *
+     * @return string 
+     */
+    public function getNameLast()
+    {
+        return $this->nameLast;
+    }
+
+    /**
+     * Set phoneCell
+     *
+     * @param string $phoneCell
+     * @return Sales
+     */
+    public function setPhoneCell($phoneCell)
+    {
+        $this->phoneCell = $phoneCell;
+    
+        return $this;
+    }
+
+    /**
+     * Get phoneCell
+     *
+     * @return string 
+     */
+    public function getPhoneCell()
+    {
+        return $this->phoneCell;
+    }
+
+    /**
+     * Set phoneDesk
+     *
+     * @param string $phoneDesk
+     * @return Sales
+     */
+    public function setPhoneDesk($phoneDesk)
+    {
+        $this->phoneDesk = $phoneDesk;
+    
+        return $this;
+    }
+
+    /**
+     * Get phoneDesk
+     *
+     * @return string 
+     */
+    public function getPhoneDesk()
+    {
+        return $this->phoneDesk;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return Sales
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set fax
+     *
+     * @param string $fax
+     * @return Sales
+     */
+    public function setFax($fax)
+    {
+        $this->fax = $fax;
+    
+        return $this;
+    }
+
+    /**
+     * Get fax
+     *
+     * @return string 
+     */
+    public function getFax()
+    {
+        return $this->fax;
+    }
+
+    /**
+     * Set locale
+     *
+     * @param string $locale
+     * @return Sales
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+    
+        return $this;
+    }
+
+    /**
+     * Get locale
+     *
+     * @return string 
+     */
+    public function getLocale()
+    {
+        return $this->locale;
+    }
+}

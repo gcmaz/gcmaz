@@ -1,0 +1,248 @@
+<?php
+
+namespace Gcmaz\CmsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Gcmaz\CmsBundle\Entity\Concert
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\ConcertRepository")
+ * @ORM\HasLifecycleCallbacks
+ */
+class Concert
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     * @var string $title
+     * 
+     * @ORM\Column(name="title", type="string")
+     */
+    private $title;
+    
+    /**
+     * @var string $content
+     *
+     * @ORM\Column(name="content", type="text", nullable=false)
+     */
+    private $content;
+
+    /**
+     * @var User $author
+     *
+     * @ORM\ManyToOne(targetEntity="Gcmaz\UserBundle\Entity\User")
+     */
+    private $author;
+
+    /**
+     * @var Media $picture
+     *
+     * @ORM\OneToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Media", cascade={"all"})
+     */
+    private $picture;
+
+    /**
+     * @var Link $link
+     *
+     * @ORM\Column(name="link", type="string", nullable=true)
+     */
+    private $link;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $concertDate;
+
+    /**
+     * @var boolean $published
+     *
+     * @ORM\Column(name="published", type="boolean")
+     */
+    private $published;
+    
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Concert
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     * @return Concert
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+    
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string 
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+    
+    /**
+     * Set link
+     *
+     * @param string $link
+     * @return Link
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
+    
+        return $this;
+    }
+
+    /**
+     * Get link
+     *
+     * @return string
+     */
+    public function getLink()
+    {
+        return $this->link;
+    }
+    
+    /**
+     * Set concertDate
+     *
+     * @param \string $concertDate
+     * @return Concert
+     */
+    public function setConcertDate($concertDate)
+    {
+        $this->concertDate = $concertDate;
+    
+        return $this;
+    }
+
+    /**
+     * Get concertDate
+     *
+     * @return \string
+     */
+    public function getConcertDate()
+    {
+        return $this->concertDate;
+    }
+
+    /**
+     * Set published
+     *
+     * @param boolean $published
+     * @return Concert
+     */
+    public function setPublished($published)
+    {
+        $this->published = $published;
+    
+        return $this;
+    }
+
+    /**
+     * Get published
+     *
+     * @return boolean 
+     */
+    public function getPublished()
+    {
+        return $this->published;
+    }
+
+    /**
+     * Set author
+     *
+     * @param \Gcmaz\UserBundle\Entity\User $author
+     * @return Concert
+     */
+    public function setAuthor(\Gcmaz\UserBundle\Entity\User $author = null)
+    {
+        $this->author = $author;
+    
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return \Gcmaz\UserBundle\Entity\User
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Application\Sonata\MediaBundle\Entity\Media $picture
+     * @return Concert
+     */
+    public function setPicture(\Application\Sonata\MediaBundle\Entity\Media $picture = null)
+    {
+        $this->picture = $picture;
+    
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Application\Sonata\MediaBundle\Entity\Media 
+     */
+    public function getPicture()
+    {
+        return $this->picture;
+    }
+
+    public function __toString()
+    {
+        return ($this->getTitle() === null) ? 'Upcoming Concert' : (string) $this->getTitle();
+    }
+    
+}

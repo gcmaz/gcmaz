@@ -78,10 +78,12 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Gcmaz\UserBundle\Entity\User
+    group:
+        group_class: Gcmaz\UserBundle\Entity\Group
     profile: # Authentication Form
         form:
             type: fos_user_profile
-            #handler: fos_user.profile.form.handler.default
+            handler: fos_user.profile.form.handler.default
             name: fos_user_profile_form
             #validation_groups: [Authentication] # Please note : this is not default value
             
@@ -99,6 +101,19 @@ sonata_admin:
         history: SonataAdminBundle:CRUD:history.html.twig
         preview: SonataAdminBundle:CRUD:preview.html.twig
         delete:  SonataAdminBundle:CRUD:delete.html.twig
+    security:
+        handler: sonata.admin.security.handler.acl
+        # acl security information
+        information:
+            GUEST:    [VIEW, LIST]
+            STAFF:    [EDIT, LIST, CREATE]
+            EDITOR:   [OPERATOR, EXPORT]
+            ADMIN:    [MASTER]
+        # permissions not related to an object instance and also to be available when objects do not exist
+        # the DELETE admin permission means the user is allowed to batch delete objects
+        admin_permissions: [CREATE, LIST, DELETE, UNDELETE, EXPORT, OPERATOR, MASTER]
+        # permission related to the objects
+        object_permissions: [VIEW, EDIT, DELETE, UNDELETE, OPERATOR, MASTER, OWNER]
  
 sonata_block:
     default_contexts: [cms]
@@ -111,29 +126,30 @@ sonata_block:
         sonata.block.service.rss:
           
 sonata_user:
-    security_acl:     false
+    security_acl: true
     class:
-        user:         Gcmaz\UserBundle\Entity\User
-    admin:                  # Admin Classes
+        user: Gcmaz\UserBundle\Entity\User
+        group: Gcmaz\UserBundle\Entity\Group
+    admin:   # Admin Classes
         user:
-            class:          Sonata\UserBundle\Admin\Entity\UserAdmin
-            controller:     SonataAdminBundle:CRUD
-            translation:    SonataUserBundle
+            class: Sonata\UserBundle\Admin\Entity\UserAdmin
+            controller: SonataAdminBundle:CRUD
+            translation: SonataUserBundle
  
         group:
-            class:          Sonata\UserBundle\Admin\Entity\GroupAdmin
-            controller:     SonataAdminBundle:CRUD
-            translation:    SonataUserBundle
+            class: Sonata\UserBundle\Admin\Entity\GroupAdmin
+            controller: SonataAdminBundle:CRUD
+            translation: SonataUserBundle
     profile:  # Profile Form (firstname, lastname, etc ...)
         form:
-            type:               sonata_user_profile
-            handler:            sonata.user.profile.form.handler.default
-            name:               sonata_user_profile_form
+            type: sonata_user_profile
+            handler: sonata.user.profile.form.handler.default
+            name: sonata_user_profile_form
             validation_groups:  [Profile]
             
 sonata_media:
     default_context: default
-    db_driver: doctrine_orm # or doctrine_mongodb
+    db_driver: doctrine_orm
     contexts:
         default:  # the default context is mandatory
             providers:

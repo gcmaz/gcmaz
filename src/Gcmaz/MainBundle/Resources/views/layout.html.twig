@@ -56,9 +56,9 @@
       </script>
 {% endblock %}
       
-{% block menubar %}
+{# block menubar %}
     <nav class="menu_box">
-        {#<ul class="dropdown">
+        <ul class="dropdown">
             <li class="headlink">
                 <a href="{{ path('gcm_homepage') }}">GREAT CIRCLE MEDIA</a>
             </li>
@@ -67,8 +67,8 @@
               <li class="headlink">
                   <a href="{{ path('gcm_contact') }}">CONTACT US</a>
               </li>
-          </ul>#}
-          {#<ul class="dropdown">
+          </ul>
+          <ul class="dropdown">
               <li class="headlink">
                   <a href="#">RADIO STATIONS</a>
                   <ul>
@@ -80,10 +80,10 @@
                       <li><a href="http://funoldies.gcmaz.com">Fun Oldies</a></li>
                   </ul>
               </li>
-          </ul>#}
+          </ul>
           <a href="./admin/login" class="login">LOGIN</a>
       </nav>
-{% endblock %}
+{% endblock #}
       
 {% block leftcol_logo %}
         <div class="logo_box">
@@ -128,7 +128,7 @@
                     &copy; GuyAnn Corporation<br/>All Rights Reserved
             </p>
             <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
-                <a href="http://www.gcmaz.com/legal/GeneralContestRules.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">Contest Rules</a>
+                <a href="./admin/login" style="color:#79818b;text-decoration:none;">Login &raquo;</a>
                 &nbsp; | &nbsp;
                 <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
             </p>
