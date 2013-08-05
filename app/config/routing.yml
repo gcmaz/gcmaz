@@ -1,14 +1,14 @@
-gcmaz_cms:
-    resource: "@GcmazCmsBundle/Resources/config/routing.yml"
-    prefix:   /
-
 gcmaz_main:
     resource: "@GcmazMainBundle/Resources/config/routing.yml"
     prefix:   /
 
-#gcmaz_user:
-    #resource: "@GcmazUserBundle/Resources/config/routing.yml"
-    #prefix:   /
+gcmaz_cms:
+    resource: "@GcmazCmsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+gcmaz_user:
+    resource: "@GcmazUserBundle/Resources/config/routing.yml"
+    prefix:   /
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

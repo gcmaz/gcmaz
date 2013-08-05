@@ -5,6 +5,7 @@
 /vendor/
 /app/config/parameters.yml
 /web/old/
+/uploads/*
 # Netbeans Specific #
 /nbproject/private/
 build/

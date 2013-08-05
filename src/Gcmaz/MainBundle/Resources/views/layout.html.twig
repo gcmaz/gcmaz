@@ -92,18 +92,24 @@
 {% endblock %}
 
 {% block footer %}
-    <div id="ftr-left">
-            {#<ul class="ftr-links-list">
-            <li style="background-image:url('/images/ftr-icon-home.png');"><a href="{{ path('gcm_homepage') }}">Home</a></li>
-            <li style="background-image:url('/images/ftr-icon-contact.png');"><a href="{{ path('gcm_contact') }}">Contact Us</a></li>
-        </ul>#}
-    </div>
-    <div id="ftr-right">
-        <div id="ftr-right-1">
+    <div id="ftr">
+        <div id="ftr-gcm">
+            <a href="/"><img src="{{ asset('images/ftr-gcmaz-logo.png') }}" width="167" height="70" alt="Great Circle Media Arizona" style="padding-top:4px;"/></a>
+            <p style="color:#c7d1e1;font-size:12px;font-weight:bold;padding:0;margin:2px auto 0;">
+                Great Circle Media
+            </p>
+            <p style="color:#79818b;font-size:10px;font-weight:bold;padding:0;margin:2px auto;line-height:1.1;">
+                    &copy; GuyAnn Corporation<br/>All Rights Reserved
+            </p>
+            <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
+                <a href="{{path('gcm_homepage')}}admin/login" style="color:#79818b;text-decoration:none;">Login &raquo;</a>
+                &nbsp; | &nbsp;
+                <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
+            </p>
         </div>
-        <div id="ftr-right-2">
+        <div id="ftr-cities">
             <p class="unica" style="color:#79818b;font-size: 0.9em;padding-top:10px;">CITIES WE SERVE</p>
-            <div style="margin-top:5px;">
+            <div style="margin-top:5px;display:block;width:240px;">
                 <ul class="ftr-cities-list" style="float:left;width:90px;">
                     <li>Flagstaff</li>
                     <li>Prescott</li>
@@ -118,23 +124,6 @@
                 </ul>
                 <br class="clear" />
             </div>
-        </div>
-        <div id="ftr-right-3">
-            <a href="/"><img src="{{ asset('images/ftr-gcmaz-logo.png') }}" width="167" height="70" alt="Great Circle Media Arizona" style="padding-top:4px;"/></a>
-            <p style="color:#c7d1e1;font-size:12px;font-weight:bold;padding:0;margin:2px auto 0;">
-                Great Circle Media
-            </p>
-            <p style="color:#79818b;font-size:10px;font-weight:bold;padding:0;margin:2px auto;line-height:1.1;">
-                    &copy; GuyAnn Corporation<br/>All Rights Reserved
-            </p>
-            <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
-                <a href="./admin/login" style="color:#79818b;text-decoration:none;">Login &raquo;</a>
-                &nbsp; | &nbsp;
-                <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
-            </p>
-        </div>
-        <div id="ftr-right-4">
-            <br/>
         </div>
     </div>
     <br class="clear" />
