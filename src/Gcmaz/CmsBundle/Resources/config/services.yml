@@ -4,3 +4,8 @@ services:
         arguments: ['', Gcmaz\CmsBundle\Entity\Concert, 'SonataAdminBundle:CRUD', '@service_container']
         tags:
             - { name: sonata.admin, manager_type: orm, group: Concert Listings, label: Concerts }
+    gcmaz.cms.admin.realtor:
+        class: Gcmaz\CmsBundle\Admin\RealtorAdmin
+        arguments: ['', Gcmaz\CmsBundle\Entity\Realtor, 'SonataAdminBundle:CRUD', '@service_container']
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Realtor Listings, label: Realtor }

@@ -5,13 +5,13 @@ namespace Gcmaz\CmsBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Gcmaz\CmsBundle\Entity\Concert
+ * Gcmaz\CmsBundle\Entity\Realtor
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\ConcertRepository")
+ * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\RealtorRepository")
  * @ORM\HasLifecycleCallbacks
  */
-class Concert
+class Realtor
 {
     /**
      * @var integer
@@ -23,18 +23,18 @@ class Concert
     private $id;
     
     /**
-     * @var string $title
+     * @var string $address
      * 
-     * @ORM\Column(name="title", type="string")
+     * @ORM\Column(name="address", type="string")
      */
-    private $title;
+    private $address;
     
     /**
-     * @var string $content
+     * @var string $description
      *
-     * @ORM\Column(name="content", type="text", nullable=false)
+     * @ORM\Column(name="description", type="text", nullable=false)
      */
-    private $content;
+    private $description;
 
     /**
      * @var User $author
@@ -51,24 +51,22 @@ class Concert
     private $picture;
 
     /**
-     * @var Link $link
-     *
-     * @ORM\Column(name="link", type="string", nullable=true)
+     * @ORM\Column(type="datetime", nullable=true)
      */
-    private $link;
-
+    private $listDate;
+    
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $concertDate;
+    private $creationDate;
 
     /**
-     * @var boolean $published
+     * @var boolean $active
      *
-     * @ORM\Column(name="published", type="boolean")
+     * @ORM\Column(name="active", type="boolean")
      */
-    private $published;
-    
+    private $active;
+
     /**
      * Get id
      *
@@ -80,125 +78,125 @@ class Concert
     }
 
     /**
-     * Set title
+     * Set address
      *
-     * @param string $title
-     * @return Concert
+     * @param string $address
+     * @return Realtor
      */
-    public function setTitle($title)
+    public function setAddress($address)
     {
-        $this->title = $title;
+        $this->address = $address;
     
         return $this;
     }
 
     /**
-     * Get title
+     * Get address
      *
      * @return string 
      */
-    public function getTitle()
+    public function getAddress()
     {
-        return $this->title;
+        return $this->address;
     }
 
     /**
-     * Set content
+     * Set description
      *
-     * @param string $content
-     * @return Concert
+     * @param string $description
+     * @return Realtor
      */
-    public function setContent($content)
+    public function setDescription($description)
     {
-        $this->content = $content;
+        $this->description = $description;
     
         return $this;
     }
 
     /**
-     * Get content
+     * Get description
      *
      * @return string 
      */
-    public function getContent()
+    public function getDescription()
     {
-        return $this->content;
+        return $this->description;
     }
-    
+
     /**
-     * Set link
+     * Set listDate
      *
-     * @param string $link
-     * @return Link
+     * @param string $listDate
+     * @return Realtor
      */
-    public function setLink($link)
+    public function setListDate($listDate)
     {
-        $this->link = $link;
+        $this->listDate = $listDate;
     
         return $this;
     }
 
     /**
-     * Get link
+     * Get listDate
      *
-     * @return string
+     * @return string 
      */
-    public function getLink()
+    public function getListDate()
     {
-        return $this->link;
-    }
-    
-    /**
-     * Set concertDate
-     *
-     * @param \string $concertDate
-     * @return Concert
-     */
-    public function setConcertDate($concertDate)
-    {
-        $this->concertDate = $concertDate;
-    
-        return $this;
+        return $this->listDate;
     }
 
     /**
-     * Get concertDate
+     * Set creationDate
      *
-     * @return \string
+     * @param \DateTime $creationDate
+     * @return Realtor
      */
-    public function getConcertDate()
+    public function setCreationDate($creationDate)
     {
-        return $this->concertDate;
-    }
-
-    /**
-     * Set published
-     *
-     * @param boolean $published
-     * @return Concert
-     */
-    public function setPublished($published)
-    {
-        $this->published = $published;
+        $this->creationDate = $creationDate;
     
         return $this;
     }
 
     /**
-     * Get published
+     * Get creationDate
+     *
+     * @return \DateTime 
+     */
+    public function getCreationDate()
+    {
+        return $this->creationDate;
+    }
+
+    /**
+     * Set active
+     *
+     * @param boolean $active
+     * @return Realtor
+     */
+    public function setActive($active)
+    {
+        $this->active = $active;
+    
+        return $this;
+    }
+
+    /**
+     * Get active
      *
      * @return boolean 
      */
-    public function getPublished()
+    public function getActive()
     {
-        return $this->published;
+        return $this->active;
     }
 
     /**
      * Set author
      *
      * @param \Gcmaz\UserBundle\Entity\User $author
-     * @return Concert
+     * @return Realtor
      */
     public function setAuthor(\Gcmaz\UserBundle\Entity\User $author = null)
     {
@@ -210,7 +208,7 @@ class Concert
     /**
      * Get author
      *
-     * @return \Gcmaz\UserBundle\Entity\User
+     * @return \Gcmaz\UserBundle\Entity\User 
      */
     public function getAuthor()
     {
@@ -221,7 +219,7 @@ class Concert
      * Set picture
      *
      * @param \Application\Sonata\MediaBundle\Entity\Media $picture
-     * @return Concert
+     * @return Realtor
      */
     public function setPicture(\Application\Sonata\MediaBundle\Entity\Media $picture = null)
     {
@@ -240,9 +238,8 @@ class Concert
         return $this->picture;
     }
 
-    public function __toString()
+        public function __toString()
     {
-        return ($this->getTitle() === null) ? 'Upcoming Concert' : (string) $this->getTitle();
+        return ($this->getAddress() === null) ? 'Dream Homes' : (string) $this->getAddress();
     }
-    
 }
