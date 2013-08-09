@@ -34,7 +34,7 @@ class RealtorAdmin extends Admin
             ->with('Media')
                 ->add('picture', 'sonata_type_model_list', array('required' => true), array(
                     'link_parameters' => array(
-                        'context' => 'default',
+                        'context' => 'realtor',
                         'provider'=>'sonata.media.provider.image'
                 )))
             ->end()

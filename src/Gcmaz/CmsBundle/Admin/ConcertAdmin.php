@@ -31,15 +31,13 @@ class ConcertAdmin extends Admin
                 ->add('content')
                 ->add('concertDate')
                 ->add('link')
+                ->add('published', null, array('required' => false))
             ->with('Media')
                 ->add('picture', 'sonata_type_model_list', array('required' => true), array(
                     'link_parameters' => array(
-                        'context' => 'default',
+                        'context' => 'concerts',
                         'provider'=>'sonata.media.provider.image'
                 )))
-            ->end()
-            ->with('Published')
-                ->add('published', null, array('required' => false))
             ->end()
             ->setHelps(array(
                 'content' => 'Enter concert details'

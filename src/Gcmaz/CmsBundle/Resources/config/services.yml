@@ -8,4 +8,4 @@ services:
         class: Gcmaz\CmsBundle\Admin\RealtorAdmin
         arguments: ['', Gcmaz\CmsBundle\Entity\Realtor, 'SonataAdminBundle:CRUD', '@service_container']
         tags:
-            - { name: sonata.admin, manager_type: orm, group: Realtor Listings, label: Realtor }
+            - { name: sonata.admin, manager_type: orm, group: Realtor Listings, label: Dream Homes }
