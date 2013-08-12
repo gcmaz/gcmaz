@@ -1,0 +1,69 @@
+<?php
+
+namespace Gcmaz\CmsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Gcmaz\CmsBundle\Entity\Pet
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\PetRepository")
+ * @ORM\HasLifecycleCallbacks
+ */
+class Pet
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     * @var string $name
+     * 
+     * @ORM\Column(name="name", type="string")
+     */
+    private $name;
+    
+    /**
+     * @var string $description
+     *
+     * @ORM\Column(name="description", type="text", nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var User $author
+     *
+     * @ORM\ManyToOne(targetEntity="Gcmaz\UserBundle\Entity\User")
+     */
+    private $author;
+
+    /**
+     * @var Media $picIdx
+     *
+     * @ORM\OneToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Media", cascade={"all"})
+     */
+    private $picIdx;
+    
+        /**
+     * @var Media $picDesc
+     *
+     * @ORM\OneToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Media", cascade={"all"})
+     */
+    private $picDesc;
+    
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $creationDate;
+
+    public function __toString()
+    {
+        return ($this->getAddress() === null) ? 'Dream Homes' : (string) $this->getAddress();
+    }
+}

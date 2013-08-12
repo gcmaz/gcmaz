@@ -154,10 +154,10 @@ sonata_media:
         #the default context is mandatory
         default:
             providers:
-                - sonata.media.provider.dailymotion
-                - sonata.media.provider.youtube
                 - sonata.media.provider.image
                 - sonata.media.provider.file
+                - sonata.media.provider.youtube
+                #- sonata.media.provider.dailymotion
             formats:
                 small: { width: 100 , quality: 70}
                 big:   { width: 500 , quality: 70}
@@ -165,10 +165,7 @@ sonata_media:
         #concert listings
         concerts:
             providers:
-                - sonata.media.provider.dailymotion
-                - sonata.media.provider.youtube
                 - sonata.media.provider.image
-                - sonata.media.provider.file
             formats:
                 small: { width: 100 , quality: 70}
                 big:   { width: 600 , quality: 70}
@@ -176,10 +173,7 @@ sonata_media:
         #whats happening listings
         whats:
             providers:
-                - sonata.media.provider.dailymotion
-                - sonata.media.provider.youtube
                 - sonata.media.provider.image
-                - sonata.media.provider.file
             formats:
                 small: { width: 100 , quality: 70}
                 big:   { width: 600 , quality: 70}
@@ -187,10 +181,7 @@ sonata_media:
         #community listings
         community:
             providers:
-                - sonata.media.provider.dailymotion
-                - sonata.media.provider.youtube
                 - sonata.media.provider.image
-                - sonata.media.provider.file
             formats:
                 small: { width: 100 , quality: 70}
                 big:   { width: 600 , quality: 70}
@@ -198,13 +189,20 @@ sonata_media:
         #reator listings - dream home        
         realtor:
             providers:
-                - sonata.media.provider.dailymotion
-                - sonata.media.provider.youtube
                 - sonata.media.provider.image
-                - sonata.media.provider.file
+                - sonata.media.provider.youtube
             formats:
                 small: { width: 100 , quality: 70}
                 big:   { width: 600 , quality: 70}
+                
+        #pet listings - dream home        
+        pet:
+            providers:
+                - sonata.media.provider.image
+                - sonata.media.provider.youtube
+            formats:
+                small: { width: 150 , quality: 70}
+                big:   { width: 250 , quality: 70}
  
     cdn:
         server:
@@ -214,3 +212,7 @@ sonata_media:
         local:
             directory:  %kernel.root_dir%/../web/uploads/media
             create:     false
+            
+    providers:
+        image:
+            resizer: sonata.media.resizer.square
