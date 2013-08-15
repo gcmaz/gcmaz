@@ -3,6 +3,7 @@
 namespace Gcmaz\CmsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Gcmaz\CmsBundle\Entity\Concert
@@ -14,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Concert
 {
     /**
-     * @var integer
+     * @var integer $id
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -28,6 +29,19 @@ class Concert
      * @ORM\Column(name="title", type="string")
      */
     private $title;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="StationConcert",  mappedBy="order", cascade={"all"})
+     */
+    protected $stationconcert;
+            
+    protected $stations;
+    
+    public function __construct()
+    {
+        $this->stationconcert = new ArryCollection();
+        $this->stations = new ArrayCollection();
+    }
     
     /**
      * @var string $content
@@ -61,7 +75,37 @@ class Concert
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $concertDate;
+    
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $showKAFF;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $showKMGN;
+    
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $showKFSZ;
+    
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $showKAFFAM;
+    
+     /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $showKTMG;
+    
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $showKNOT;
+    
     /**
      * @var boolean $published
      *
@@ -240,9 +284,208 @@ class Concert
         return $this->picture;
     }
 
+    /**
+     * Set showKAFF
+     *
+     * @param boolean $showKAFF
+     * @return Concert
+     */
+    public function setShowKAFF($showKAFF)
+    {
+        $this->showKAFF = $showKAFF;
+    
+        return $this;
+    }
+
+    /**
+     * Get showKAFF
+     *
+     * @return boolean 
+     */
+    public function getShowKAFF()
+    {
+        return $this->showKAFF;
+    }
+
+    /**
+     * Set showKMGN
+     *
+     * @param boolean $showKMGN
+     * @return Concert
+     */
+    public function setShowKMGN($showKMGN)
+    {
+        $this->showKMGN = $showKMGN;
+    
+        return $this;
+    }
+
+    /**
+     * Get showKMGN
+     *
+     * @return boolean 
+     */
+    public function getShowKMGN()
+    {
+        return $this->showKMGN;
+    }
+
+    /**
+     * Set showKFSZ
+     *
+     * @param boolean $showKFSZ
+     * @return Concert
+     */
+    public function setShowKFSZ($showKFSZ)
+    {
+        $this->showKFSZ = $showKFSZ;
+    
+        return $this;
+    }
+
+    /**
+     * Get showKFSZ
+     *
+     * @return boolean 
+     */
+    public function getShowKFSZ()
+    {
+        return $this->showKFSZ;
+    }
+
+    /**
+     * Set showKAFFAM
+     *
+     * @param boolean $showKAFFAM
+     * @return Concert
+     */
+    public function setShowKAFFAM($showKAFFAM)
+    {
+        $this->showKAFFAM = $showKAFFAM;
+    
+        return $this;
+    }
+
+    /**
+     * Get showKAFFAM
+     *
+     * @return boolean 
+     */
+    public function getShowKAFFAM()
+    {
+        return $this->showKAFFAM;
+    }
+
+    /**
+     * Set showKTMG
+     *
+     * @param boolean $showKTMG
+     * @return Concert
+     */
+    public function setShowKTMG($showKTMG)
+    {
+        $this->showKTMG = $showKTMG;
+    
+        return $this;
+    }
+
+    /**
+     * Get showKTMG
+     *
+     * @return boolean 
+     */
+    public function getShowKTMG()
+    {
+        return $this->showKTMG;
+    }
+
+    /**
+     * Set showKNOT
+     *
+     * @param boolean $showKNOT
+     * @return Concert
+     */
+    public function setShowKNOT($showKNOT)
+    {
+        $this->showKNOT = $showKNOT;
+    
+        return $this;
+    }
+
+    /**
+     * Get showKNOT
+     *
+     * @return boolean 
+     */
+    public function getShowKNOT()
+    {
+        return $this->showKNOT;
+    }
+
+    /**
+     * Add stationconcert
+     *
+     * @param \Gcmaz\CmsBundle\Entity\StationConcert $stationconcert
+     * @return Concert
+     */
+    public function addStationconcert(\Gcmaz\CmsBundle\Entity\StationConcert $stationconcert)
+    {
+        $this->stationconcert[] = $stationconcert;
+    
+        return $this;
+    }
+
+    /**
+     * Remove stationconcert
+     *
+     * @param \Gcmaz\CmsBundle\Entity\StationConcert $stationconcert
+     */
+    public function removeStationconcert(\Gcmaz\CmsBundle\Entity\StationConcert $stationconcert)
+    {
+        $this->stationconcert->removeElement($stationconcert);
+    }
+
+    /**
+     * Get stationconcert
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getStationconcert()
+    {
+        return $this->stationconcert;
+    }
+
     public function __toString()
     {
         return ($this->getTitle() === null) ? 'Upcoming Concert' : (string) $this->getTitle();
+    }
+    
+    //important
+    public function getStation()
+    {
+        $stations = new ArrayCollection();
+        foreach($this->stationconcert as $sc)
+        {
+            $stations[] = $sc->getStation();
+        }
+        return $stations;
+    }
+    
+    //important
+    public function setStation($stations)
+    {
+        foreach($stations as $s)
+        {
+            $stationconcert = new Stationconcert();
+            $stationconcert->setConcert($this);
+            $stationconcert->setStation($s);
+            $this->addStationconcert($stationconcert);
+        }
+    }
+    
+    public function getConcert()
+    {
+        return $this;
     }
     
 }

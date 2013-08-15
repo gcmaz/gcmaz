@@ -1,0 +1,48 @@
+<?php
+
+namespace Gcmaz\CmsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Gcmaz\CmsBundle\Entity\Station
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\StationRepository")
+ * @ORM\HasLifecycleCallbacks
+ */
+class Station
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     * @var string $callname
+     * 
+     * @ORM\Column(name="callname", type="string")
+     */
+    private $callname;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="StationConcert" , mappedBy="station", cascade={"all"})
+     */
+    protected $stationconcert;
+    
+    public function __construct()
+    {
+        
+    }
+    
+    public function __toString()
+    {
+        return $this->callname;
+    }
+    
+}
+?>

@@ -39,6 +39,9 @@ class ConcertAdmin extends Admin
                         'provider'=>'sonata.media.provider.image'
                 )))
             ->end()
+            ->with('Stations')
+                ->add('kaff', 'checkbox')
+            ->end()
             ->setHelps(array(
                 'content' => 'Enter concert details'
             ))

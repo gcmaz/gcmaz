@@ -5,15 +5,16 @@ namespace Gcmaz\CmsBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Concert
+ * Gcmaz\CmsBundle\Entity\Concert
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\ConcertRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Concert
 {
     /**
-     * @var integer
+     * @var integer $id
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -27,6 +28,19 @@ class Concert
      * @ORM\Column(name="title", type="string")
      */
     private $title;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="StationConcert",  mappedBy="order", cascade={"all"})
+     */
+    protected $stationconcert;
+            
+    protected $stations;
+    
+    public function __construct()
+    {
+        $this->stationconcert = new ArryCollection();
+        $this->stations = new ArrayCollection();
+    }
     
     /**
      * @var string $content
@@ -62,22 +76,42 @@ class Concert
     private $concertDate;
     
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="boolean", nullable=false)
      */
-    private $creationDate;
+    private $showKaff;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="boolean", nullable=false)
      */
-    private $modificationDate;
-
+    private $showMtn;
+    
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $showHits;
+    
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $showFlgCntry;
+    
+     /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $showMagic;
+    
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $showOld;
+    
     /**
      * @var boolean $published
      *
      * @ORM\Column(name="published", type="boolean")
      */
     private $published;
-
+    
     /**
      * Get id
      *
@@ -160,7 +194,7 @@ class Concert
     /**
      * Set concertDate
      *
-     * @param \DateTime $concertDate
+     * @param \string $concertDate
      * @return Concert
      */
     public function setConcertDate($concertDate)
@@ -173,57 +207,11 @@ class Concert
     /**
      * Get concertDate
      *
-     * @return \DateTime 
+     * @return \string
      */
     public function getConcertDate()
     {
         return $this->concertDate;
-    }
-
-    /**
-     * Set creationDate
-     *
-     * @param \DateTime $creationDate
-     * @return Concert
-     */
-    public function setCreationDate($creationDate)
-    {
-        $this->creationDate = $creationDate;
-    
-        return $this;
-    }
-
-    /**
-     * Get creationDate
-     *
-     * @return \DateTime 
-     */
-    public function getCreationDate()
-    {
-        return $this->creationDate;
-    }
-
-    /**
-     * Set modificationDate
-     *
-     * @param \DateTime $modificationDate
-     * @return Concert
-     */
-    public function setModificationDate($modificationDate)
-    {
-        $this->modificationDate = $modificationDate;
-    
-        return $this;
-    }
-
-    /**
-     * Get modificationDate
-     *
-     * @return \DateTime 
-     */
-    public function getModificationDate()
-    {
-        return $this->modificationDate;
     }
 
     /**
@@ -295,5 +283,9 @@ class Concert
         return $this->picture;
     }
 
-
+    public function __toString()
+    {
+        return ($this->getTitle() === null) ? 'Upcoming Concert' : (string) $this->getTitle();
+    }
+    
 }

@@ -1,0 +1,44 @@
+<?php
+
+namespace Gcmaz\CmsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Gcmaz\CmsBundle\Entity\StationConcert
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\StationRepository")
+ * @ORM\HasLifecycleCallbacks
+ */
+class StationConcert
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="Station", inversedBy="stationconcert")
+     * @ORM\JoinColumn(name="station_id", referencedColumnName="id")
+     */
+    protected $station;
+    
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="Concert", inversedBy="stationconcert")
+     * @ORM\JoinColumn(name="concert_id", referencedColumnName="id")
+     */
+    protected $concert;
+    
+    public function __toString()
+    {
+        return $this->id;
+    }
+}
+?>

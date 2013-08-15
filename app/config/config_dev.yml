@@ -36,7 +36,7 @@ sonata_media:
             path: /gcmaz/web/uploads/media
     filesystem:
         local:
-            directory: /gcmaz/web/uploads/media
+            directory: %kernel.root_dir%/../web/uploads/media
             create:     false
             
 ivory_ck_editor:
