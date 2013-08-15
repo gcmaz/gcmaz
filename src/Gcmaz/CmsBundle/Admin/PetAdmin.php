@@ -28,11 +28,13 @@ class PetAdmin extends Admin
     {
         $formMapper
                 ->add('name')
-                ->add('description')
+                ->add('description', 'ckeditor', array(
+                    'config_name' => 'cms_pet'
+                    ))
             ->with('Media')
                 ->add('picture', 'sonata_type_model_list', array(
                     'required' => true,
-                    'label' => 'Photo'
+                    'label' => 'Photo',
                     ),
                     array(
                         'link_parameters' => array(

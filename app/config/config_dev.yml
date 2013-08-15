@@ -29,3 +29,16 @@ assetic:
 
 swiftmailer:
     delivery_address: stacy.mark@kaff.com
+
+sonata_media:
+    cdn:
+        server:
+            path: /gcmaz/web/uploads/media
+    filesystem:
+        local:
+            directory: /gcmaz/web/uploads/media
+            create:     false
+            
+ivory_ck_editor:
+    base_path: "bundles/ivoryckeditor/"
+    js_path: "bundles/ivoryckeditor/ckeditor.js"

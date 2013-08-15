@@ -216,3 +216,31 @@ sonata_media:
     providers:
         image:
             resizer: sonata.media.resizer.square
+            
+ivory_ck_editor:
+    enable: true
+    base_path: "/bundles/ivoryckeditor/"
+    js_path: "/bundles/ivoryckeditor/ckeditor.js"
+    configs:
+        cms_pet:
+            toolbar:  "cms_tb_sm"
+            ui_color: "#ffffff"
+            height: "250"
+        #my_config_2:
+            #toolbar:  "my_toolbar_2"
+            #ui_color: "#ffffff"
+    toolbars:
+        configs:
+            cms_tb_lg: [ "@document", "@styles", "@color", "/", "@basicstyles", "@paragraph", "@link", "/", "@source", "@tool1", "@tool2" ]
+            cms_tb_med: ["@document", "@styles", "@color", "/", "@basicstyles", "@paragraph", "@link", "/", "@source", "@tool1", "@tool2"]
+            cms_tb_sm: ["@basicstyles", "@color", "@link"]
+        items:
+            document: ["Cut", "Copy", "Paste", "PasteText", "PasteFromWord", "Undo", "Redo"  ]
+            styles: [ "Styles", "Format", "Font", "FontSize" ]
+            color: [ "TextColor", "BGColor" ]
+            basicstyles: [ "Bold", "Italic", "Underline", "Strike", "Subscript", "Superscript", "-", "RemoveFormat" ]
+            paragraph: [ "NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote", "CreateDiv", "-", "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock", "-", "BidiLtr", "BidiRtl" ]
+            link:     [ "Link", "Unlink" ]
+            source: [ "Source" ]
+            tool1:     [ "Maximize" ]
+            tool2:     [ "Save" ]
