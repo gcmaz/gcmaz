@@ -31,7 +31,7 @@ class Concert
     private $title;
     
     /**
-     * @ORM\OneToMany(targetEntity="StationConcert",  mappedBy="order", cascade={"all"})
+     * @ORM\OneToMany(targetEntity="StationConcert",  mappedBy="concert", cascade={"all"})
      */
     protected $stationconcert;
             
@@ -39,7 +39,7 @@ class Concert
     
     public function __construct()
     {
-        $this->stationconcert = new ArryCollection();
+        $this->stationconcert = new ArrayCollection();
         $this->stations = new ArrayCollection();
     }
     
@@ -461,7 +461,7 @@ class Concert
     }
     
     //important
-    public function getStation()
+    public function getStations()
     {
         $stations = new ArrayCollection();
         foreach($this->stationconcert as $sc)
@@ -472,7 +472,7 @@ class Concert
     }
     
     //important
-    public function setStation($stations)
+    public function setStations($stations)
     {
         foreach($stations as $s)
         {

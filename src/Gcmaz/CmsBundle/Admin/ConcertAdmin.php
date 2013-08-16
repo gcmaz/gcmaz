@@ -29,9 +29,16 @@ class ConcertAdmin extends Admin
         $formMapper
                 ->add('title')
                 ->add('content')
-                ->add('concertDate')
+                ->add('concertDate', null, array(
+                    'format' => 'MM-dd-yyyy',
+                    'years' => array(2013,2014),
+                    'hours' => array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24, 'required' => false),
+                    'minutes' => array(00,15,30,45, 'required'=> false),
+                    //'empty_value' => array('year' => 2013, 'hour' => 12, 'minute' => 00)
+                    'required' => false,
+                ))
                 ->add('link')
-                ->add('published', null, array('required' => false))
+                ->add('published', null, array('required' => false, 'data' => true))
             ->with('Media')
                 ->add('picture', 'sonata_type_model_list', array('required' => true), array(
                     'link_parameters' => array(
@@ -40,7 +47,12 @@ class ConcertAdmin extends Admin
                 )))
             ->end()
             ->with('Stations')
-                ->add('kaff', 'checkbox')
+                ->add('showKAFF', 'checkbox', array('label' => 'Show on KAFF', 'required' => false))
+                ->add('showKAFFAM', 'checkbox', array('label' => 'Show on KAFF AM', 'required' => false))
+                ->add('showKMGN', 'checkbox', array('label' => 'Show on KMGN', 'required' => false))
+                ->add('showKFSZ', 'checkbox', array('label' => 'Show on KFSZ', 'required' => false))
+                ->add('showKTMG', 'checkbox', array('label' => 'Show on KTMG', 'required' => false))
+                ->add('showKNOT', 'checkbox', array('label' => 'Show on KNOT', 'required' => false))
             ->end()
             ->setHelps(array(
                 'content' => 'Enter concert details'
@@ -65,6 +77,12 @@ class ConcertAdmin extends Admin
                 'label' => 'Image',
                 'template' => 'GcmazCmsBundle:Concert:featuredimage.html.twig'
                 ))
+            ->add('showKAFF', null, array('editable' => true, 'label' => 'KAFF', 'template' => 'GcmazCmsBundle:Concert:published.html.twig'))
+            ->add('showKAFFAM', null, array('editable' => true, 'label' => 'KAFFAM', 'template' => 'GcmazCmsBundle:Concert:published.html.twig'))
+            ->add('showKMGN', null, array('editable' => true, 'label' => 'KMGN', 'template' => 'GcmazCmsBundle:Concert:published.html.twig'))
+            ->add('showKFSZ', null, array('editable' => true, 'label' => 'KFSZ', 'template' => 'GcmazCmsBundle:Concert:published.html.twig'))
+            ->add('showKTMG', null, array('editable' => true, 'label' => 'KTMG', 'template' => 'GcmazCmsBundle:Concert:published.html.twig'))
+            ->add('showKNOT', null, array('editable' => true, 'label' => 'KNOT', 'template' => 'GcmazCmsBundle:Concert:published.html.twig'))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),
@@ -90,6 +108,12 @@ class ConcertAdmin extends Admin
                 ->add('link')
                 ->add('author')
                 ->add('concertDate')
+                ->add('showKAFF')
+                ->add('showKAFFAM')
+                ->add('showKMGN')
+                ->add('showKFSZ')
+                ->add('showKTMG')
+                ->add('showKNOT')
         ;
     }
 
@@ -113,6 +137,14 @@ class ConcertAdmin extends Admin
             ->end()
             ->with('Media')
                 ->add('picture', null, array('template' => 'GcmazCmsBundle:Concert:featuredimage.html.twig'))
+            ->end()
+            ->with('Stations')
+                ->add('showKAFF')
+                ->add('showKAFFAM')
+                ->add('showKMGN')
+                ->add('showKFSZ')
+                ->add('showKTMG')
+                ->add('showKNOT')
             ->end()
         ;
     }
