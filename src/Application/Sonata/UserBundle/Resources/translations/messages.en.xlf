@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="label_profile_gender">
+                <source>label_profile_gender</source>
+                <target>Gender</target>
+            </trans-unit>
+            <trans-unit id="label_profile_firstname">
+                <source>label_profile_firstname</source>
+                <target>First Name</target>
+            </trans-unit>
+            <trans-unit id="label_profile_lastname">
+                <source>label_profile_lastname</source>
+                <target>Last Name</target>
+            </trans-unit>
+            <trans-unit id="label_profile_website">
+                <source>label_profile_website</source>
+                <target>Website</target>
+            </trans-unit>
+            <trans-unit id="label_profile_dob">
+                <source>label_profile_dob</source>
+                <target>Date of Birth</target>
+            </trans-unit>
+            <trans-unit id="label_profile_biography">
+                <source>label_profile_biography</source>
+                <target>Bio</target>
+            </trans-unit>
+            <trans-unit id="label_profile_locale">
+                <source>label_profile_locale</source>
+                <target>Locale</target>
+            </trans-unit>
+            <trans-unit id="label_profile_timezone">
+                <source>label_profile_timezone</source>
+                <target>Timezone</target>
+            </trans-unit>
+            <trans-unit id="label_profile_phone">
+                <source>label_profile_phone</source>
+                <target>Phone</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

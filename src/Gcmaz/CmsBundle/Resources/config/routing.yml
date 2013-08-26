@@ -1,3 +1,0 @@
-gcmaz_cms_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: GcmazCmsBundle:Default:index }

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="" >
+        <body>
+            <trans-unit id="link_edit_profile">
+                <source>link_edit_profile</source>
+                <target>Edit Profile</target>
+            </trans-unit>
+            <trans-unit id="link_edit_authentication">
+                <source>link_edit_authentication</source>
+                <target>Change Username</target>
+            </trans-unit>
+            <trans-unit id="label_profile_gender">
+                <source>label_profile_gender</source>
+                <target>Gender</target>
+            </trans-unit>
+            <trans-unit id="label_profile_firstname">
+                <source>label_profile_firstname</source>
+                <target>First Name</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

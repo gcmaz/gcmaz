@@ -66,7 +66,6 @@ doctrine:
                     SonataMediaBundle: ~
                     ApplicationSonataMediaBundle: ~
 
-# Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
     host:      %mailer_host%
@@ -85,8 +84,30 @@ fos_user:
             type: fos_user_profile
             handler: fos_user.profile.form.handler.default
             name: fos_user_profile_form
-            #validation_groups: [Authentication] # Please note : this is not default value
-            
+            validation_groups: [Authentication] # Please note : this is not default value
+
+sonata_user:
+    security_acl: true
+    class:
+        user: Gcmaz\UserBundle\Entity\User
+        group: Gcmaz\UserBundle\Entity\Group
+    admin:   # Admin Classes
+        user:
+            class: Sonata\UserBundle\Admin\Entity\UserAdmin
+            controller: SonataAdminBundle:CRUD
+            translation: SonataUserBundle
+ 
+        group:
+            class: Sonata\UserBundle\Admin\Entity\GroupAdmin
+            controller: SonataAdminBundle:CRUD
+            translation: SonataUserBundle
+    profile:  # Profile Form (firstname, lastname, etc ...)
+        form:
+            type: sonata_user_profile
+            handler: sonata.user.profile.form.handler.default
+            name: sonata_user_profile_form
+            validation_groups:  [Profile]
+
 sonata_admin:
     title:      GCM Admin
     templates:
@@ -114,7 +135,11 @@ sonata_admin:
         admin_permissions: [CREATE, LIST, DELETE, UNDELETE, EXPORT, OPERATOR, MASTER]
         # permission related to the objects
         object_permissions: [VIEW, EDIT, DELETE, UNDELETE, OPERATOR, MASTER, OWNER]
- 
+
+sonata_intl:
+    timezone:
+        default: America/Phoenix
+
 sonata_block:
     default_contexts: [cms]
     blocks:
@@ -124,28 +149,6 @@ sonata_block:
         sonata.block.service.text:
         sonata.block.service.action:
         sonata.block.service.rss:
-          
-sonata_user:
-    security_acl: true
-    class:
-        user: Gcmaz\UserBundle\Entity\User
-        group: Gcmaz\UserBundle\Entity\Group
-    admin:   # Admin Classes
-        user:
-            class: Sonata\UserBundle\Admin\Entity\UserAdmin
-            controller: SonataAdminBundle:CRUD
-            translation: SonataUserBundle
- 
-        group:
-            class: Sonata\UserBundle\Admin\Entity\GroupAdmin
-            controller: SonataAdminBundle:CRUD
-            translation: SonataUserBundle
-    profile:  # Profile Form (firstname, lastname, etc ...)
-        form:
-            type: sonata_user_profile
-            handler: sonata.user.profile.form.handler.default
-            name: sonata_user_profile_form
-            validation_groups:  [Profile]
             
 sonata_media:
     default_context: default
@@ -167,8 +170,7 @@ sonata_media:
             providers:
                 - sonata.media.provider.image
             formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 600 , quality: 70}
+                small: { width: 150 , quality: 70}
                 
         #whats happening listings
         whats:
@@ -226,9 +228,14 @@ ivory_ck_editor:
             toolbar:  "cms_tb_sm"
             ui_color: "#ffffff"
             height: "250"
-        #my_config_2:
-            #toolbar:  "my_toolbar_2"
-            #ui_color: "#ffffff"
+            width: "600"
+            forcePasteAsPlainText: true
+        cms_concert:
+            toolbar:  "cms_tb_sm"
+            ui_color: "#ffffff"
+            height: "250"
+            width: "600"
+            forcePasteAsPlainText: true
     toolbars:
         configs:
             cms_tb_lg: [ "@document", "@styles", "@color", "/", "@basicstyles", "@paragraph", "@link", "/", "@source", "@tool1", "@tool2" ]
@@ -244,3 +251,10 @@ ivory_ck_editor:
             source: [ "Source" ]
             tool1:     [ "Maximize" ]
             tool2:     [ "Save" ]
+
+fos_facebook:
+    alias:  facebook
+    app_id: 699635690051270
+    secret: b1240160cb3f44e42f2fe5228020a7fe
+    cookie: true
+    permissions: [email, user_location]

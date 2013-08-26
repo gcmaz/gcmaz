@@ -37,6 +37,7 @@ class AppKernel extends Kernel
             new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
             new Gcmaz\CmsBundle\GcmazCmsBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new FOS\FacebookBundle\FOSFacebookBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

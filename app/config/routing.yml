@@ -1,15 +1,9 @@
+#imports
 gcmaz_main:
     resource: "@GcmazMainBundle/Resources/config/routing.yml"
     prefix:   /
 
-gcmaz_cms:
-    resource: "@GcmazCmsBundle/Resources/config/routing.yml"
-    prefix:   /
-
-gcmaz_user:
-    resource: "@GcmazUserBundle/Resources/config/routing.yml"
-    prefix:   /
-
+#FOSUserBundle
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
@@ -51,3 +45,11 @@ gallery:
 media:
     resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
     prefix: /media
+    
+#FOSFacebookBundle
+_security_check:
+  pattern:  /login_check
+
+_security_logout:
+  pattern:  /logout
+  

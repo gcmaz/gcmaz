@@ -1,0 +1,24 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+{% extends 'SonataUserBundle::layout.html.twig' %}
+
+{% block content %}
+<div class="sonata-user-show" style="text-align:left;line-height:1.5em;">
+    <br style="line-height: 100px;"/>
+    <p style="font-weight:600;font-size:1.2em;">{{ app.user.fullname }}</p>
+    <ul>
+        <li><a href="{{ path('sonata_user_profile_edit') }}">{{ "link_edit_profile" | trans({}, 'SonataUserBundle')}}</a></li>
+        <li><a href="{{ path('sonata_user_profile_edit_authentication') }}">{{ "link_edit_authentication" | trans({}, 'SonataUserBundle')}}</a></li>
+        <li><a href="{{ path('fos_user_change_password') }}">Change Password</a></li>
+    </ul>
+    <br/><br/>
+</div>
+{% endblock %}

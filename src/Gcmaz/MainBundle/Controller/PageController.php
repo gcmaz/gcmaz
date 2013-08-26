@@ -10,4 +10,10 @@ class PageController extends Controller
     {
         return $this->render('GcmazMainBundle:Page:index.html.twig');
     }
+    
+    public function fbgcmazAction()
+    {
+        return $this->render('GcmazMainBundle:Page:fbgcmaztest.html.twig');
+        
+    }
 }
