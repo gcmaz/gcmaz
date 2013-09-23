@@ -10,12 +10,12 @@ use Sonata\AdminBundle\Show\ShowMapper;
  
 use Knp\Menu\ItemInterface as MenuItemInterface;
  
-use Gcmaz\CmsBundle\Entity\Realtor;
+use Gcmaz\CmsBundle\Entity\Photocontest;
  
 //In order to use service for prePersist and preUpdate
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class RealtorAdmin extends Admin
+class PhotocontestAdmin extends Admin
 {
     
  /**
@@ -27,21 +27,25 @@ class RealtorAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-                ->add('address')
+                ->add('name')
                 ->add('description', 'ckeditor', array(
                     'config_name' => 'cms_min'
                     ))
-                ->add('listDate')
-                ->add('active', null, array('required' => false))
-            ->with('Media')
-                ->add('picture', 'sonata_type_model_list', array('required' => true), array(
-                    'link_parameters' => array(
-                        'context' => 'realtor',
-                        'provider'=>'sonata.media.provider.image'
-                )))
+            ->with('Photo')
+                ->add('picture', 'sonata_type_model_list', array(
+                    'required' => true,
+                    'label' => 'Photo',
+                    ),
+                    array(
+                        'link_parameters' => array(
+                            'context' => 'photocontest',
+                            'provider'=>'sonata.media.provider.image'
+                        ),
+                    )
+                )
             ->end()
             ->setHelps(array(
-                'content' => 'Enter realtor listings'
+                'content' => 'Enter a new Photo'
             ))
             ->end()
         ;
@@ -51,16 +55,10 @@ class RealtorAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('id')
-            ->add('active', null, array(
-                'editable' => true,
-                'template' => 'GcmazCmsBundle:Realtor:active.html.twig'
-                ))
-            ->addIdentifier('address')
+            ->addIdentifier('name')
             ->add('author', null, array('label' => 'Author'))
-            ->add('listDate', null, array('label' => 'List Start Date'))
             ->add('picture', null, array(
-                'label' => 'Image',
-                'template' => 'GcmazCmsBundle:Realtor:featuredimage.html.twig'
+                'label' => 'Photo'
                 ))
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -82,10 +80,8 @@ class RealtorAdmin extends Admin
     {
         $datagridMapper
                 ->add('id')
-                ->add('active')
-                ->add('address')
+                ->add('name')
                 ->add('author')
-                ->add('listDate')
         ;
     }
 
@@ -99,15 +95,13 @@ class RealtorAdmin extends Admin
     {
         $showMapper
                 ->add('id')
-            ->with('Realtor')
-                ->add('address')
+            ->with('Entry')
+                ->add('name')
                 ->add('description')
-                ->add('author', null, array('label' => 'By :'))
-                ->add('listDate')
-                ->add('active')
+                ->add('author', null, array('label' => 'Posted By'))
             ->end()
-            ->with('Media')
-                ->add('picture', null, array('template' => 'GcmazCmsBundle:Realtor:featuredimage.html.twig'))
+            ->with('Photo')
+                ->add('picture', null, array('label' => 'Photo'))
             ->end()
         ;
     }
@@ -119,10 +113,10 @@ class RealtorAdmin extends Admin
            $this->container = $container;
        }
    //the prePersist
-   public function prePersist($realtor)
+   public function prePersist($pet)
    {
        $user = $this->container->get('security.context')->getToken()->getUser();
-       $realtor->setAuthor($user);
+       $pet->setAuthor($user);
    }
 }
 ?>

@@ -28,8 +28,8 @@ class ConcertAdmin extends Admin
     {
         $formMapper
                 ->add('title')
-                ->add('content', 'ckeditor', array(
-                        'config_name' => 'cms_concert'
+                ->add('description', 'ckeditor', array(
+                    'config_name' => 'cms_min'
                     ))
                 ->add('concertDate', null, array(
                     'format' => 'MM-dd-yyyy',
@@ -61,7 +61,7 @@ class ConcertAdmin extends Admin
                 'link' => '(This will display a generic link that says MORE INFO.  If used, paste entire URL including the http:// ...   You can also add your own links in the Content above.)',
                 'published' => '(Published = visible.  Uncheck if you just want it to be a draft for now, and publish later)',
                 'picture' => '(You can upload a new photo or select one already in the list.  It will resize to 150px wide automatically.  Uploading LARGE photos may cause problems.)',
-                'showKNOT' => '(Select the stations to be visible in the concert listings)',
+                'showKNOT' => '(Select the stations to show the concert listings)',
                 ))
             ->end()
         ;

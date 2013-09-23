@@ -21,7 +21,6 @@
     
 {% block styles %}
     <link type="text/css" rel="stylesheet" href="{{ asset('css/styles.css') }}" />
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/styles.tweet.css') }}" />
     <link href='http://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
 {% endblock %}
     
@@ -34,11 +33,6 @@
 <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-{% endblock %}
-
-{% block js_top %}
-    <script type="text/javascript" src="{{ asset('scripts/jquery-1.9.1.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('scripts/common.js') }}"></script>
 {% endblock %}
     
 {% block analytics %}
@@ -90,9 +84,7 @@
     </div>
     {# end #}
     </div>
-    <div style="height:400px;">
     
-    </div>
 {% endblock %}
         
 {% block footer %}
@@ -113,4 +105,15 @@
         </div>
     </div>
     <br class="clear" />
+{% endblock %}
+
+{% block js_btm %}
+    <script type="text/javascript" src="{{ asset('scripts/jquery-1.9.1.min.js') }}"></script>
+    <script type="text/javascript">
+        //move footer down
+        $h_win = $(document).height();
+        $h_ftr = $('#footer').height();
+        $hbg = $h_win - $h_ftr + "px";
+        $('.bgtile').css('height', $hbg);
+    </script>
 {% endblock %}

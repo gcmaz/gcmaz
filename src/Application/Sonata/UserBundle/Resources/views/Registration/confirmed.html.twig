@@ -1,0 +1,20 @@
+{# overrides vendor/sonata-project/user-bundle/Sonata/UserBundle/Resources/views/Registratin/confirmed.html.twig #}
+
+{% extends 'SonataUserBundle::layout.html.twig' %}
+
+{% block content %}
+    <div style="text-align:left;line-height:2em;">
+    <p style="margin-top:30px;">
+        <a href="{{ path('fos_user_profile_show')}}">Edit Profile &raquo;</a>
+        &nbsp; &nbsp;
+        <a href="{{ path('gcm_homepage')}}admin/dashboard">Go to Content Editor &raquo;</a>
+    </p>
+    {% block fos_user_content %}
+        <p>{{ 'registration.confirmed'|trans({'%username%': user.username}, 'FOSUserBundle') }}</p>
+        {% if app.session is not empty %}
+            {% set targetUrl = app.session.get('_security.' ~ app.security.token.providerKey ~ '.target_path') %}
+            {% if targetUrl is not empty %}<p><a href="{{ targetUrl }}">{{ 'registration.back'|trans({}, 'FOSUserBundle') }}</a></p>{% endif %}
+        {% endif %}
+    {% endblock fos_user_content %}
+    </div>
+{% endblock %}

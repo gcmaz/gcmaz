@@ -11,6 +11,12 @@ fos_user_profile:
     resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
     prefix: /profile
 
+fos_user_profile_show:
+    path:  /profile
+    defaults: { _controller: SonataUserBundle:Profile:show }
+    requirements:
+        _method: GET
+
 fos_user_register:
     resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
     prefix: /register
@@ -46,10 +52,3 @@ media:
     resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
     prefix: /media
     
-#FOSFacebookBundle
-_security_check:
-  pattern:  /login_check
-
-_security_logout:
-  pattern:  /logout
-  

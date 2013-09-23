@@ -4,11 +4,11 @@
         <body>
             <trans-unit id="link_edit_profile">
                 <source>link_edit_profile</source>
-                <target>Edit Profile</target>
+                <target>Change First/Last Name or Phone Number</target>
             </trans-unit>
             <trans-unit id="link_edit_authentication">
                 <source>link_edit_authentication</source>
-                <target>Change Username</target>
+                <target>Change Username or Email</target>
             </trans-unit>
             <trans-unit id="label_profile_gender">
                 <source>label_profile_gender</source>

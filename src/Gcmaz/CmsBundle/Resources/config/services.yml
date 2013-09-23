@@ -16,3 +16,9 @@ services:
         arguments: ['', Gcmaz\CmsBundle\Entity\Pet, 'SonataAdminBundle:CRUD', '@service_container']
         tags:
             - { name: sonata.admin, manager_type: orm, group: Pets, label: Pet of the Week }
+            
+    gcmaz.cms.admin.photocontest:
+        class: Gcmaz\CmsBundle\Admin\PhotocontestAdmin
+        arguments: ['', Gcmaz\CmsBundle\Entity\Photocontest, 'SonataAdminBundle:CRUD', '@service_container']
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Photo Contest, label: Entries }

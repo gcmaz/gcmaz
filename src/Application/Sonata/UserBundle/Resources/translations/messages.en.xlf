@@ -38,6 +38,14 @@
                 <source>label_profile_phone</source>
                 <target>Phone</target>
             </trans-unit>
+            <trans-unit id="title_user_account">
+                <source>title_user_account</source>
+                <target>Profile</target>
+            </trans-unit>
+            <trans-unit id="title_user_edit_authentication">
+                <source>title_user_edit_authentication</source>
+                <target>Change Username or Email</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

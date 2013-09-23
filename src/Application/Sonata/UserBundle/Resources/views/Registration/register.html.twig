@@ -1,0 +1,15 @@
+{# overrides vendor/sonata-project/user-bundle/Sonata/UserBundle/Resources/views/Registratin/register.html.twig #}
+
+{% extends 'SonataUserBundle::layout.html.twig' %}
+
+{% block content %}
+<div class="sonata-user-edit-authentication" style="text-align:left;line-height:2em;">
+    <br style="line-height: 50px;"/>
+    <p style="font-weight:600;font-size:1.2em;">
+        Register to be an editor
+    </p>
+    {% block fos_user_content %}
+        {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+    {% endblock fos_user_content %}
+</div>
+{% endblock %}

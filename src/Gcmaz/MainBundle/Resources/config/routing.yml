@@ -6,6 +6,3 @@ gcm_contact:
     path: /contact/great-circle-media
     defaults: { _controller: GcmazMainBundle:Page:contact }
 
-gcm_fbgcmaztest:
-    path: /fbgcmaztest
-    defaults: { _controller: GcmazMainBundle:Page:fbgcmaz }

@@ -205,6 +205,14 @@ sonata_media:
             formats:
                 small: { width: 150 , quality: 70}
                 big:   { width: 250 , quality: 70}
+
+         #photo contests        
+        photocontest:
+            providers:
+                - sonata.media.provider.image
+            formats:
+                small: { width: 150 , quality: 70}
+                big:   { width: 500 , quality: 70}
  
     cdn:
         server:
@@ -224,37 +232,29 @@ ivory_ck_editor:
     base_path: "/bundles/ivoryckeditor/"
     js_path: "/bundles/ivoryckeditor/ckeditor.js"
     configs:
-        cms_pet:
+        cms_min:
             toolbar:  "cms_tb_sm"
             ui_color: "#ffffff"
             height: "250"
             width: "600"
             forcePasteAsPlainText: true
-        cms_concert:
-            toolbar:  "cms_tb_sm"
-            ui_color: "#ffffff"
-            height: "250"
-            width: "600"
-            forcePasteAsPlainText: true
+        #cms_med:
+        #cms_max:
+          
     toolbars:
         configs:
             cms_tb_lg: [ "@document", "@styles", "@color", "/", "@basicstyles", "@paragraph", "@link", "/", "@source", "@tool1", "@tool2" ]
-            cms_tb_med: ["@document", "@styles", "@color", "/", "@basicstyles", "@paragraph", "@link", "/", "@source", "@tool1", "@tool2"]
-            cms_tb_sm: ["@basicstyles", "@color", "@link"]
+            cms_tb_med: ["@document", "/", "@basicstyles", "@paragraph", "@size", "@color", "@link", "/", "@source", "@tool1", "@tool2"]
+            cms_tb_sm: ["@document", "@basicstyles", "@color", "@size", "@link"]
         items:
             document: ["Cut", "Copy", "Paste", "PasteText", "PasteFromWord", "Undo", "Redo"  ]
             styles: [ "Styles", "Format", "Font", "FontSize" ]
+            size: [ "FontSize"]
             color: [ "TextColor", "BGColor" ]
-            basicstyles: [ "Bold", "Italic", "Underline", "Strike", "Subscript", "Superscript", "-", "RemoveFormat" ]
+            basicstyles: [ "Bold", "Italic", "Underline", "Strike", "-", "RemoveFormat" ]
+            supsub: [ "Subscript", "Superscript" ]
             paragraph: [ "NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote", "CreateDiv", "-", "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock", "-", "BidiLtr", "BidiRtl" ]
             link:     [ "Link", "Unlink" ]
             source: [ "Source" ]
             tool1:     [ "Maximize" ]
             tool2:     [ "Save" ]
-
-fos_facebook:
-    alias:  facebook
-    app_id: 699635690051270
-    secret: b1240160cb3f44e42f2fe5228020a7fe
-    cookie: true
-    permissions: [email, user_location]

@@ -29,9 +29,9 @@ class PetAdmin extends Admin
         $formMapper
                 ->add('name')
                 ->add('description', 'ckeditor', array(
-                    'config_name' => 'cms_pet'
+                    'config_name' => 'cms_min'
                     ))
-            ->with('Media')
+            ->with('Photo')
                 ->add('picture', 'sonata_type_model_list', array(
                     'required' => true,
                     'label' => 'Photo',
@@ -100,7 +100,7 @@ class PetAdmin extends Admin
                 ->add('description')
                 ->add('author', null, array('label' => 'Posted By'))
             ->end()
-            ->with('Media')
+            ->with('Photo')
                 ->add('picture', null, array('label' => 'Photo'))
             ->end()
         ;
