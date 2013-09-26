@@ -73,6 +73,7 @@ h2{
     padding: 10px;
 }
 a img { border:0; }
+img { height:auto; }
 .centered{
 	margin:0 auto;
 	display:block;

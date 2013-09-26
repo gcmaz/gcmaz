@@ -28,7 +28,7 @@ class ConcertAdmin extends Admin
     {
         $formMapper
                 ->add('title')
-                ->add('description', 'ckeditor', array(
+                ->add('content', 'ckeditor', array(
                     'config_name' => 'cms_min'
                     ))
                 ->add('concertDate', null, array(

@@ -112,6 +112,7 @@ sonata_admin:
     title:      GCM Admin
     templates:
         ## default global templates
+        #dashboard: GcmazCmsBundle::dashboard.html.twig
         layout:  SonataAdminBundle::standard_layout.html.twig
         ajax:    SonataAdminBundle::ajax_layout.html.twig
  
