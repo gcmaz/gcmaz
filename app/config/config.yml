@@ -109,10 +109,11 @@ sonata_user:
             validation_groups:  [Profile]
 
 sonata_admin:
-    title:      GCM Admin
+    title:      CMS Dashboard
+    title_logo: "/images/logo-gcmaz-sm.png"
     templates:
         ## default global templates
-        #dashboard: GcmazCmsBundle::dashboard.html.twig
+        #dashboard: GcmazCmsBundle:Core:dashboard.html.twig
         layout:  SonataAdminBundle::standard_layout.html.twig
         ajax:    SonataAdminBundle::ajax_layout.html.twig
  
@@ -123,6 +124,21 @@ sonata_admin:
         history: SonataAdminBundle:CRUD:history.html.twig
         preview: SonataAdminBundle:CRUD:preview.html.twig
         delete:  SonataAdminBundle:CRUD:delete.html.twig
+    dashboard:
+        blocks:
+          -
+            position: left
+            type: sonata.admin.block.admin_list
+          -
+            position: right
+            type: sonata.block.service.text
+            settings:
+                content: >
+                    <div style="background-color:#e7e7e7;border;1px solid #ccc;padding:20px;">
+                        <p style="font-weight:bold;color:#039;">Welcome to the Great Circle Media Content Management System</p>
+                        <p>Change your password here.</p>
+                        <p style="font-weight:bold;">Password: <a href="../resetting/request">Reset &raquo;</a></p>
+                    </div>
     security:
         handler: sonata.admin.security.handler.acl
         # acl security information

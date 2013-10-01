@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "0e53991ef6d9eb101b4fa79e6800129d",
+    "hash": "6d5d6a6546a14b14dcc80a6399c52106",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2010,12 +2010,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "d802e4e7970ca650f6f9e62dd3b0c7a21572b03d"
+                "reference": "f618281bc73545ba5fda091e52f717a05a5942fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/d802e4e7970ca650f6f9e62dd3b0c7a21572b03d",
-                "reference": "d802e4e7970ca650f6f9e62dd3b0c7a21572b03d",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/f618281bc73545ba5fda091e52f717a05a5942fd",
+                "reference": "f618281bc73545ba5fda091e52f717a05a5942fd",
                 "shasum": ""
             },
             "require": {
@@ -2080,7 +2080,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-09-27 18:42:50"
+            "time": "2013-09-30 07:39:14"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -2264,12 +2264,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-                "reference": "2e4711f260d8c00ab6e4b4369a3d28f175e26fee"
+                "reference": "cecd8ade4095d17bc3e2f229b94e928628b60ac7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/2e4711f260d8c00ab6e4b4369a3d28f175e26fee",
-                "reference": "2e4711f260d8c00ab6e4b4369a3d28f175e26fee",
+                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/cecd8ade4095d17bc3e2f229b94e928628b60ac7",
+                "reference": "cecd8ade4095d17bc3e2f229b94e928628b60ac7",
                 "shasum": ""
             },
             "require": {
@@ -2312,7 +2312,7 @@
                 "generator",
                 "sonata"
             ],
-            "time": "2013-09-27 21:00:47"
+            "time": "2013-09-27 23:20:41"
         },
         {
             "name": "sonata-project/easy-extends-bundle",
@@ -3169,6 +3169,56 @@
             "time": "2013-09-27 07:31:40"
         },
         {
+            "name": "tilleuls/acl-sonata-admin-extension-bundle",
+            "version": "dev-master",
+            "target-dir": "CoopTilleuls/Bundle/AclSonataAdminExtensionBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coopTilleuls/CoopTilleulsAclSonataAdminExtensionBundle.git",
+                "reference": "071a1d9721b9d2157ff6128ff2b460da76b26045"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coopTilleuls/CoopTilleulsAclSonataAdminExtensionBundle/zipball/071a1d9721b9d2157ff6128ff2b460da76b26045",
+                "reference": "071a1d9721b9d2157ff6128ff2b460da76b26045",
+                "shasum": ""
+            },
+            "require": {
+                "sonata-project/admin-bundle": "2.2.*@dev",
+                "symfony/symfony": ">=2.2,<2.4-dev"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "CoopTilleuls\\Bundle\\AclSonataAdminExtensionBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@les-tilleuls.coop",
+                    "homepage": "http://dunglas.fr"
+                }
+            ],
+            "description": "ACL list filtering for SonataAdmin",
+            "homepage": "http://les-tilleuls.coop",
+            "keywords": [
+                "acl",
+                "admin",
+                "sonata"
+            ],
+            "time": "2013-09-09 09:29:38"
+        },
+        {
             "name": "twig/extensions",
             "version": "v1.0.0",
             "source": {
@@ -3289,7 +3339,8 @@
         "sonata-project/intl-bundle": 20,
         "sonata-project/doctrine-orm-admin-bundle": 20,
         "sonata-project/user-bundle": 20,
-        "sonata-project/media-bundle": 20
+        "sonata-project/media-bundle": 20,
+        "tilleuls/acl-sonata-admin-extension-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

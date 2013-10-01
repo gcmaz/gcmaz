@@ -4,7 +4,10 @@
 
 {% block content %}
 <div class="sonata-user-show" style="text-align:left;line-height:2em;">
-    <br style="line-height: 100px;"/>
+    <p style="margin-top:30px;">
+        <a href="../admin/dashboard">GCM CMS Dashboard &raquo;</a>
+    </p>
+    <br style="line-height: 50px;"/>
     <p style="font-weight:600;font-size:1.2em;">{{ app.user.fullname }}</p>
     <ul>
         <li><a href="{{ path('sonata_user_profile_edit') }}">{{ "link_edit_profile" | trans({}, 'SonataUserBundle')}}</a></li>
