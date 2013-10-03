@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6d5d6a6546a14b14dcc80a6399c52106",
+    "hash": "0e53991ef6d9eb101b4fa79e6800129d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1186,12 +1186,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSDiExtraBundle.git",
-                "reference": "782ecc42faff1a40e38ab587862f74564cee1dd7"
+                "reference": "01029f6a19c5a4131b80878311cd44a990ff923a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSDiExtraBundle/zipball/782ecc42faff1a40e38ab587862f74564cee1dd7",
-                "reference": "782ecc42faff1a40e38ab587862f74564cee1dd7",
+                "url": "https://api.github.com/repos/schmittjoh/JMSDiExtraBundle/zipball/01029f6a19c5a4131b80878311cd44a990ff923a",
+                "reference": "01029f6a19c5a4131b80878311cd44a990ff923a",
                 "shasum": ""
             },
             "require": {
@@ -1244,7 +1244,7 @@
                 "annotations",
                 "dependency injection"
             ],
-            "time": "2013-09-17 09:48:21"
+            "time": "2013-10-02 11:10:43"
         },
         {
             "name": "jms/metadata",
@@ -2010,12 +2010,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "f618281bc73545ba5fda091e52f717a05a5942fd"
+                "reference": "fa8c9e4783aa151eb62205a07fa2fdded95f5768"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/f618281bc73545ba5fda091e52f717a05a5942fd",
-                "reference": "f618281bc73545ba5fda091e52f717a05a5942fd",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/fa8c9e4783aa151eb62205a07fa2fdded95f5768",
+                "reference": "fa8c9e4783aa151eb62205a07fa2fdded95f5768",
                 "shasum": ""
             },
             "require": {
@@ -2080,7 +2080,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-09-30 07:39:14"
+            "time": "2013-10-02 19:17:48"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -2264,12 +2264,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-                "reference": "cecd8ade4095d17bc3e2f229b94e928628b60ac7"
+                "reference": "6f0312984965d0edc029e437486715a2687749e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/cecd8ade4095d17bc3e2f229b94e928628b60ac7",
-                "reference": "cecd8ade4095d17bc3e2f229b94e928628b60ac7",
+                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/6f0312984965d0edc029e437486715a2687749e6",
+                "reference": "6f0312984965d0edc029e437486715a2687749e6",
                 "shasum": ""
             },
             "require": {
@@ -2312,7 +2312,7 @@
                 "generator",
                 "sonata"
             ],
-            "time": "2013-09-27 23:20:41"
+            "time": "2013-10-01 10:26:22"
         },
         {
             "name": "sonata-project/easy-extends-bundle",
@@ -2728,12 +2728,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataUserBundle.git",
-                "reference": "673cc3e7c9457f71d7b30b5ef7c22784847a091a"
+                "reference": "6724a406648dcc235256b9332ba4daf059b91b71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/673cc3e7c9457f71d7b30b5ef7c22784847a091a",
-                "reference": "673cc3e7c9457f71d7b30b5ef7c22784847a091a",
+                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/6724a406648dcc235256b9332ba4daf059b91b71",
+                "reference": "6724a406648dcc235256b9332ba4daf059b91b71",
                 "shasum": ""
             },
             "require": {
@@ -2785,7 +2785,7 @@
                 "sonata",
                 "user"
             ],
-            "time": "2013-09-23 13:22:14"
+            "time": "2013-10-03 15:33:46"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3169,56 +3169,6 @@
             "time": "2013-09-27 07:31:40"
         },
         {
-            "name": "tilleuls/acl-sonata-admin-extension-bundle",
-            "version": "dev-master",
-            "target-dir": "CoopTilleuls/Bundle/AclSonataAdminExtensionBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/coopTilleuls/CoopTilleulsAclSonataAdminExtensionBundle.git",
-                "reference": "071a1d9721b9d2157ff6128ff2b460da76b26045"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/coopTilleuls/CoopTilleulsAclSonataAdminExtensionBundle/zipball/071a1d9721b9d2157ff6128ff2b460da76b26045",
-                "reference": "071a1d9721b9d2157ff6128ff2b460da76b26045",
-                "shasum": ""
-            },
-            "require": {
-                "sonata-project/admin-bundle": "2.2.*@dev",
-                "symfony/symfony": ">=2.2,<2.4-dev"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "CoopTilleuls\\Bundle\\AclSonataAdminExtensionBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kévin Dunglas",
-                    "email": "kevin@les-tilleuls.coop",
-                    "homepage": "http://dunglas.fr"
-                }
-            ],
-            "description": "ACL list filtering for SonataAdmin",
-            "homepage": "http://les-tilleuls.coop",
-            "keywords": [
-                "acl",
-                "admin",
-                "sonata"
-            ],
-            "time": "2013-09-09 09:29:38"
-        },
-        {
             "name": "twig/extensions",
             "version": "v1.0.0",
             "source": {
@@ -3267,16 +3217,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.13.2",
+            "version": "v1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "v1.13.2"
+                "reference": "224fc55635d544a2ec8edb3592be18db5a093f59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.13.2",
-                "reference": "v1.13.2",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/224fc55635d544a2ec8edb3592be18db5a093f59",
+                "reference": "224fc55635d544a2ec8edb3592be18db5a093f59",
                 "shasum": ""
             },
             "require": {
@@ -3285,7 +3235,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.13-dev"
+                    "dev-master": "1.14-dev"
                 }
             },
             "autoload": {
@@ -3312,7 +3262,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-08-03 15:35:31"
+            "time": "2013-10-03 06:41:20"
         }
     ],
     "packages-dev": [
@@ -3339,8 +3289,7 @@
         "sonata-project/intl-bundle": 20,
         "sonata-project/doctrine-orm-admin-bundle": 20,
         "sonata-project/user-bundle": 20,
-        "sonata-project/media-bundle": 20,
-        "tilleuls/acl-sonata-admin-extension-bundle": 20
+        "sonata-project/media-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

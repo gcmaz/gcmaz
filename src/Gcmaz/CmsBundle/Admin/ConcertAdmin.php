@@ -36,6 +36,7 @@ class ConcertAdmin extends Admin
                     'years' => array(2013,2014),
                     'hours' => array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24, 'required' => false),
                     'minutes' => array(00,15,30,45, 'required'=> false),
+                    'empty_value' => array('year' => 2013, 'hour' => 0, 'minute' => 00)
                     //'empty_value' => array('year' => 2013, 'hour' => 12, 'minute' => 00)
                     //'required' => false,
                 ))
@@ -58,7 +59,7 @@ class ConcertAdmin extends Admin
             ->end()
             ->setHelps(array(
                 'concertDate' => '(Hours and Minutes NOT Required and wont display anyways)',
-                'link' => '(This will display a generic link that says MORE INFO.  If used, paste entire URL including the http:// ...   You can also add your own links in the Content above.)',
+                'link' => '(If used,  INCLUDE the http://    This will display a generic link that says MORE INFO.  You can also add your own links in the Content above.)',
                 'published' => '(Published = visible.  Uncheck if you just want it to be a draft for now, and publish later)',
                 'picture' => '(You can upload a new photo or select one already in the list.  It will resize to 150px wide automatically.  Uploading LARGE photos may cause problems.)',
                 'showKNOT' => '(Select the stations to show the concert listings)',
