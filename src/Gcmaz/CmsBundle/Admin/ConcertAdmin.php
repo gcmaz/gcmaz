@@ -33,11 +33,10 @@ class ConcertAdmin extends Admin
                     ))
                 ->add('concertDate', null, array(
                     'format' => 'MM-dd-yyyy',
-                    'years' => array(2013,2014),
-                    'hours' => array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24, 'required' => false),
-                    'minutes' => array(00,15,30,45, 'required'=> false),
-                    'empty_value' => array('year' => 2013, 'hour' => 0, 'minute' => 00)
-                    //'empty_value' => array('year' => 2013, 'hour' => 12, 'minute' => 00)
+                    'years' => array(2013, 2014),
+                    'hours' => array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24, 'required' => false),
+                    'minutes' => array(0,15,30,45, 'required'=> false),
+                    // caused issues ... empty_value' => array('year' => 2013, 'hour' => 12, 'minute' => 00)
                     //'required' => false,
                 ))
                 ->add('link')

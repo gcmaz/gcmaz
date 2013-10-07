@@ -275,3 +275,7 @@ ivory_ck_editor:
             source: [ "Source" ]
             tool1:     [ "Maximize" ]
             tool2:     [ "Save" ]
+
+genemu_form:
+    select2: ~
+    date: ~
