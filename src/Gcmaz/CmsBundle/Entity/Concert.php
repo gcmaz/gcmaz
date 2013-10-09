@@ -4,6 +4,7 @@ namespace Gcmaz\CmsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping\JoinColumn;
 
 /**
  * Gcmaz\CmsBundle\Entity\Concert
@@ -37,10 +38,16 @@ class Concert
             
     protected $stations;
     
+    /**
+     * @ORM\OneToMany(targetEntity="ConcertPicture",  mappedBy="concert", cascade={"all"})
+     */
+    protected $concertpicture;
+    
     public function __construct()
     {
         $this->stationconcert = new ArrayCollection();
         $this->stations = new ArrayCollection();
+        $this->concertpicture = new ArrayCollection();
     }
     
     /**
@@ -56,13 +63,6 @@ class Concert
      * @ORM\ManyToOne(targetEntity="Gcmaz\UserBundle\Entity\User")
      */
     private $author;
-
-    /**
-     * @var Media $picture
-     *
-     * @ORM\OneToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Media", cascade={"all"})
-     */
-    private $picture;
 
     /**
      * @var Link $link
@@ -262,29 +262,6 @@ class Concert
     }
 
     /**
-     * Set picture
-     *
-     * @param \Application\Sonata\MediaBundle\Entity\Media $picture
-     * @return Concert
-     */
-    public function setPicture(\Application\Sonata\MediaBundle\Entity\Media $picture = null)
-    {
-        $this->picture = $picture;
-    
-        return $this;
-    }
-
-    /**
-     * Get picture
-     *
-     * @return \Application\Sonata\MediaBundle\Entity\Media 
-     */
-    public function getPicture()
-    {
-        return $this->picture;
-    }
-
-    /**
      * Set showKAFF
      *
      * @param boolean $showKAFF
@@ -454,11 +431,6 @@ class Concert
     {
         return $this->stationconcert;
     }
-
-    public function __toString()
-    {
-        return ($this->getTitle() === null) ? 'Upcoming Concert' : (string) $this->getTitle();
-    }
     
     //important
     public function getStations()
@@ -483,9 +455,58 @@ class Concert
         }
     }
     
+    
+    
+    /**
+     * Add concertpicture
+     *
+     * @param \Gcmaz\CmsBundle\Entity\ConcertPicture $concertpicture
+     * @return Concert
+     */
+    public function addConcertpicture(\Gcmaz\CmsBundle\Entity\ConcertPicture $concertpicture)
+    {
+        $this->concertpicture[] = $concertpicture;
+    
+        return $this;
+    }
+
+    /**
+     * Remove concertpicture
+     *
+     * @param \Gcmaz\CmsBundle\Entity\ConcertPicture $concertpicture
+     */
+    public function removeConcertpicture(\Gcmaz\CmsBundle\Entity\ConcertPicture $concertpicture)
+    {
+        $this->concertpicture->removeElement($concertpicture);
+    }
+
+    /**
+     * Get concertpicture
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getConcertpicture()
+    {
+        return $this->concertpicture;
+    }
+    
+    public function setConcertpicture($concertpictures) {
+        $this->concertpicture = new ArrayCollection();
+
+        foreach ($concertpictures as $concertpicture) {
+            $concertpicture->setConcert($this);
+            $this->addConcertpicture($concertpicture);
+        }
+    }
+    
     public function getConcert()
     {
         return $this;
+    }
+    
+        public function __toString()
+    {
+        return ($this->getTitle() === null) ? 'Upcoming Concert' : (string) $this->getTitle();
     }
     
 }

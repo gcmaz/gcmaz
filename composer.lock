@@ -719,17 +719,17 @@
         },
         {
             "name": "egeloen/ckeditor-bundle",
-            "version": "2.1.6",
+            "version": "2.1.7",
             "target-dir": "Ivory/CKEditorBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egeloen/IvoryCKEditorBundle.git",
-                "reference": "22e6292579c9ffb7193c4d20616ab6b74b6ad414"
+                "reference": "f8cb2dc814d3f2cacaba153ba5da940e5964d839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egeloen/IvoryCKEditorBundle/zipball/22e6292579c9ffb7193c4d20616ab6b74b6ad414",
-                "reference": "22e6292579c9ffb7193c4d20616ab6b74b6ad414",
+                "url": "https://api.github.com/repos/egeloen/IvoryCKEditorBundle/zipball/f8cb2dc814d3f2cacaba153ba5da940e5964d839",
+                "reference": "f8cb2dc814d3f2cacaba153ba5da940e5964d839",
                 "shasum": ""
             },
             "require": {
@@ -770,7 +770,7 @@
             "keywords": [
                 "CKEditor"
             ],
-            "time": "2013-08-22 14:26:05"
+            "time": "2013-10-09 16:54:18"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -2081,12 +2081,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "fdb1124a2864817c62dd61fdb5950881ebe69dbe"
+                "reference": "37e87c9e7456b3186320639dda48278b717dbd1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/fdb1124a2864817c62dd61fdb5950881ebe69dbe",
-                "reference": "fdb1124a2864817c62dd61fdb5950881ebe69dbe",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/37e87c9e7456b3186320639dda48278b717dbd1e",
+                "reference": "37e87c9e7456b3186320639dda48278b717dbd1e",
                 "shasum": ""
             },
             "require": {
@@ -2151,7 +2151,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-10-07 21:39:07"
+            "time": "2013-10-10 08:12:10"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -2658,12 +2658,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataMediaBundle.git",
-                "reference": "10e0d25b798b8b58131f86b153e3502dc85c46d4"
+                "reference": "f51e82e5a88a8cc18b268cb896fe027a14436f90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/10e0d25b798b8b58131f86b153e3502dc85c46d4",
-                "reference": "10e0d25b798b8b58131f86b153e3502dc85c46d4",
+                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/f51e82e5a88a8cc18b268cb896fe027a14436f90",
+                "reference": "f51e82e5a88a8cc18b268cb896fe027a14436f90",
                 "shasum": ""
             },
             "require": {
@@ -2724,7 +2724,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2013-10-07 17:30:16"
+            "time": "2013-10-10 09:58:36"
         },
         {
             "name": "sonata-project/notification-bundle",
@@ -3134,16 +3134,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.5",
+            "version": "v2.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "aa5626cd2a359567c948ebdeeca68d948640302f"
+                "reference": "d0597156c4c03ceca039f6b7770a47397ba295f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/aa5626cd2a359567c948ebdeeca68d948640302f",
-                "reference": "aa5626cd2a359567c948ebdeeca68d948640302f",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/d0597156c4c03ceca039f6b7770a47397ba295f0",
+                "reference": "d0597156c4c03ceca039f6b7770a47397ba295f0",
                 "shasum": ""
             },
             "require": {
@@ -3238,7 +3238,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-09-27 07:31:40"
+            "time": "2013-10-10 13:24:22"
         },
         {
             "name": "twig/extensions",

@@ -24,28 +24,28 @@ class Sales
     /**
      * @var string
      *
-     * @ORM\Column(name="name_first", type="string", length=20)
+     * @ORM\Column(name="nameFirst", type="string", length=20)
      */
     private $nameFirst;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="name_last", type="string", length=30)
+     * @ORM\Column(name="nameLast", type="string", length=30)
      */
     private $nameLast;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="phone_cell", type="string", length=20)
+     * @ORM\Column(name="phoneCell", type="string", length=20)
      */
     private $phoneCell;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="phone_desk", type="string", length=20)
+     * @ORM\Column(name="phoneDesk", type="string", length=20)
      */
     private $phoneDesk;
 
@@ -240,5 +240,10 @@ class Sales
     public function getLocale()
     {
         return $this->locale;
+    }
+    
+    public function __toString()
+    {
+        return ($this->getId() === null) ? 'ID Unknown' : (string) $this->getId();
     }
 }

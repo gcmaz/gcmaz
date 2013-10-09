@@ -3,19 +3,18 @@
 namespace Gcmaz\CmsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * Gcmaz\CmsBundle\Entity\Photocontest
+ * Gcmaz\CmsBundle\Entity\Pet
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\PhotocontestRepository")
+ * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\PetRepository")
  * @ORM\HasLifecycleCallbacks
  */
 class Photocontest
 {
     /**
-     * @var integer $id
+     * @var integer
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -24,18 +23,18 @@ class Photocontest
     private $id;
     
     /**
-     * @var string $title
+     * @var string $name
      * 
-     * @ORM\Column(name="title", type="string")
+     * @ORM\Column(name="name", type="string")
      */
-    private $title;
+    private $name;
     
     /**
-     * @var string $desc
+     * @var string $description
      *
-     * @ORM\Column(name="desc", type="text", nullable=false)
+     * @ORM\Column(name="description", type="text", nullable=false)
      */
-    private $desc;
+    private $description;
 
     /**
      * @var User $author
@@ -43,39 +42,103 @@ class Photocontest
      * @ORM\ManyToOne(targetEntity="Gcmaz\UserBundle\Entity\User")
      */
     private $author;
-
-    /**
+    
+        /**
      * @var Media $picture
      *
      * @ORM\OneToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Media", cascade={"all"})
      */
     private $picture;
-
-    /**
-     * @var Link $link
-     *
-     * @ORM\Column(name="link", type="string", nullable=true)
-     */
-    private $link;
-
+    
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $entrydate;
-    
+    private $creationDate;
+
     /**
-     * @var boolean $published
+     * Get id
      *
-     * @ORM\Column(name="published", type="boolean")
+     * @return integer 
      */
-    private $published;
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Pet
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Pet
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set creationDate
+     *
+     * @param \DateTime $creationDate
+     * @return Pet
+     */
+    public function setCreationDate($creationDate)
+    {
+        $this->creationDate = $creationDate;
+    
+        return $this;
+    }
+
+    /**
+     * Get creationDate
+     *
+     * @return \DateTime 
+     */
+    public function getCreationDate()
+    {
+        return $this->creationDate;
+    }
 
     /**
      * Set author
      *
      * @param \Gcmaz\UserBundle\Entity\User $author
-     * @return Photocontest
+     * @return Pet
      */
     public function setAuthor(\Gcmaz\UserBundle\Entity\User $author = null)
     {
@@ -87,7 +150,7 @@ class Photocontest
     /**
      * Get author
      *
-     * @return \Gcmaz\UserBundle\Entity\User
+     * @return \Gcmaz\UserBundle\Entity\User 
      */
     public function getAuthor()
     {
@@ -98,7 +161,7 @@ class Photocontest
      * Set picture
      *
      * @param \Application\Sonata\MediaBundle\Entity\Media $picture
-     * @return Photocontest
+     * @return Pet
      */
     public function setPicture(\Application\Sonata\MediaBundle\Entity\Media $picture = null)
     {
@@ -119,7 +182,6 @@ class Photocontest
     
     public function __toString()
     {
-        return ($this->getTitle() === null) ? 'Unknown Photo' : (string) $this->getTitle();
+        return ($this->getName() === null) ? 'Photo' : (string) $this->getName();
     }
-    
 }

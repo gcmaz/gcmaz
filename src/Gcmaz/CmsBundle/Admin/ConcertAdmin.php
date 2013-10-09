@@ -42,7 +42,7 @@ class ConcertAdmin extends Admin
                 ->add('link')
                 ->add('published', null, array('required' => false, 'data' => true))
             ->with('Media')
-                ->add('picture', 'sonata_type_model_list', array('required' => true), array(
+                ->add('concertpicture', 'sonata_type_collection', array('required' => true), array(
                     'link_parameters' => array(
                         'context' => 'concerts',
                         'provider'=>'sonata.media.provider.image'
@@ -166,6 +166,10 @@ class ConcertAdmin extends Admin
    {
        $user = $this->container->get('security.context')->getToken()->getUser();
        $concert->setAuthor($user);
+       $concert->setConcertpicture($concert->getConcertpicture());
    }
+    public function preUpdate($concert) {
+        $concert->setConcertpicture($concert->getConcertpicture());
+    }
 }
 ?>

@@ -124,7 +124,7 @@ sonata_admin:
         history: SonataAdminBundle:CRUD:history.html.twig
         preview: SonataAdminBundle:CRUD:preview.html.twig
         delete:  SonataAdminBundle:CRUD:delete.html.twig
-    dashboard:
+    dashboard:                    
         blocks:
           -
             position: left
@@ -190,29 +190,29 @@ sonata_media:
                 small: { width: 150 , quality: 70}
                 
         #whats happening listings
-        whats:
-            providers:
-                - sonata.media.provider.image
-            formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 600 , quality: 70}
+        #whats:
+            #providers:
+                #- sonata.media.provider.image
+            #formats:
+                #small: { width: 100 , quality: 70}
+                #big:   { width: 600 , quality: 70}
                 
         #community listings
-        community:
-            providers:
-                - sonata.media.provider.image
-            formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 600 , quality: 70}
+        #community:
+            #providers:
+                #- sonata.media.provider.image
+            #formats:
+                #small: { width: 100 , quality: 70}
+                #big:   { width: 600 , quality: 70}
                 
         #reator listings - dream home        
-        realtor:
-            providers:
-                - sonata.media.provider.image
-                - sonata.media.provider.youtube
-            formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 600 , quality: 70}
+        #realtor:
+            #providers:
+                #- sonata.media.provider.image
+                #- sonata.media.provider.youtube
+            #formats:
+                #small: { width: 100 , quality: 70}
+                #big:   { width: 600 , quality: 70}
                 
         #pet listings - dream home        
         pet:
@@ -224,12 +224,12 @@ sonata_media:
                 big:   { width: 250 , quality: 70}
 
          #photo contests        
-        photocontest:
-            providers:
-                - sonata.media.provider.image
-            formats:
-                small: { width: 150 , quality: 70}
-                big:   { width: 500 , quality: 70}
+        #photocontest:
+            #providers:
+                #- sonata.media.provider.image
+            #formats:
+                #small: { width: 150 , quality: 70}
+                #big:   { width: 500 , quality: 70}
  
     cdn:
         server:

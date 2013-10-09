@@ -38,7 +38,62 @@ class StationConcert
     
     public function __toString()
     {
+        return $this->$id;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
         return $this->id;
     }
+
+    /**
+     * Set station
+     *
+     * @param \Gcmaz\CmsBundle\Entity\Station $station
+     * @return StationConcert
+     */
+    public function setStation(\Gcmaz\CmsBundle\Entity\Station $station = null)
+    {
+        $this->station = $station;
+    
+        return $this;
+    }
+
+    /**
+     * Get station
+     *
+     * @return \Gcmaz\CmsBundle\Entity\Station 
+     */
+    public function getStation()
+    {
+        return $this->station;
+    }
+
+    /**
+     * Set concert
+     *
+     * @param \Gcmaz\CmsBundle\Entity\Concert $concert
+     * @return StationConcert
+     */
+    public function setConcert(\Gcmaz\CmsBundle\Entity\Concert $concert = null)
+    {
+        $this->concert = $concert;
+    
+        return $this;
+    }
+
+    /**
+     * Get concert
+     *
+     * @return \Gcmaz\CmsBundle\Entity\Concert 
+     */
+    public function getConcert()
+    {
+        return $this->concert;
+    }
 }
-?>
