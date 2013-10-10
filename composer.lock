@@ -719,17 +719,17 @@
         },
         {
             "name": "egeloen/ckeditor-bundle",
-            "version": "2.1.6",
+            "version": "2.1.7",
             "target-dir": "Ivory/CKEditorBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egeloen/IvoryCKEditorBundle.git",
-                "reference": "22e6292579c9ffb7193c4d20616ab6b74b6ad414"
+                "reference": "f8cb2dc814d3f2cacaba153ba5da940e5964d839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egeloen/IvoryCKEditorBundle/zipball/22e6292579c9ffb7193c4d20616ab6b74b6ad414",
-                "reference": "22e6292579c9ffb7193c4d20616ab6b74b6ad414",
+                "url": "https://api.github.com/repos/egeloen/IvoryCKEditorBundle/zipball/f8cb2dc814d3f2cacaba153ba5da940e5964d839",
+                "reference": "f8cb2dc814d3f2cacaba153ba5da940e5964d839",
                 "shasum": ""
             },
             "require": {
@@ -770,7 +770,7 @@
             "keywords": [
                 "CKEditor"
             ],
-            "time": "2013-08-22 14:26:05"
+            "time": "2013-10-09 16:54:18"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -2010,12 +2010,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "fa8c9e4783aa151eb62205a07fa2fdded95f5768"
+                "reference": "37e87c9e7456b3186320639dda48278b717dbd1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/fa8c9e4783aa151eb62205a07fa2fdded95f5768",
-                "reference": "fa8c9e4783aa151eb62205a07fa2fdded95f5768",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/37e87c9e7456b3186320639dda48278b717dbd1e",
+                "reference": "37e87c9e7456b3186320639dda48278b717dbd1e",
                 "shasum": ""
             },
             "require": {
@@ -2080,7 +2080,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-10-02 19:17:48"
+            "time": "2013-10-10 08:12:10"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -2089,12 +2089,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataBlockBundle.git",
-                "reference": "4e96f86a37b89946f2c204418af0b56826bb3798"
+                "reference": "7ffc4212df6ec3fda34031789eb6cdb0ca258f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/4e96f86a37b89946f2c204418af0b56826bb3798",
-                "reference": "4e96f86a37b89946f2c204418af0b56826bb3798",
+                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/7ffc4212df6ec3fda34031789eb6cdb0ca258f11",
+                "reference": "7ffc4212df6ec3fda34031789eb6cdb0ca258f11",
                 "shasum": ""
             },
             "require": {
@@ -2142,7 +2142,7 @@
                 "block",
                 "sonata"
             ],
-            "time": "2013-09-20 08:30:37"
+            "time": "2013-10-03 16:32:12"
         },
         {
             "name": "sonata-project/cache-bundle",
@@ -2151,12 +2151,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCacheBundle.git",
-                "reference": "6042e6eba04952e73eae0df01e32e16ce555b42e"
+                "reference": "60b14fb3ed324a5ee28900c114f3892df70dea48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCacheBundle/zipball/6042e6eba04952e73eae0df01e32e16ce555b42e",
-                "reference": "6042e6eba04952e73eae0df01e32e16ce555b42e",
+                "url": "https://api.github.com/repos/sonata-project/SonataCacheBundle/zipball/60b14fb3ed324a5ee28900c114f3892df70dea48",
+                "reference": "60b14fb3ed324a5ee28900c114f3892df70dea48",
                 "shasum": ""
             },
             "require": {
@@ -2207,7 +2207,7 @@
             "keywords": [
                 "cache block"
             ],
-            "time": "2013-09-20 08:30:01"
+            "time": "2013-10-03 16:31:31"
         },
         {
             "name": "sonata-project/doctrine-extensions",
@@ -2587,12 +2587,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataMediaBundle.git",
-                "reference": "2dbef28b7219a027e5ca9edf86540c9d6b60892f"
+                "reference": "f51e82e5a88a8cc18b268cb896fe027a14436f90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/2dbef28b7219a027e5ca9edf86540c9d6b60892f",
-                "reference": "2dbef28b7219a027e5ca9edf86540c9d6b60892f",
+                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/f51e82e5a88a8cc18b268cb896fe027a14436f90",
+                "reference": "f51e82e5a88a8cc18b268cb896fe027a14436f90",
                 "shasum": ""
             },
             "require": {
@@ -2612,6 +2612,7 @@
             "suggest": {
                 "amazonwebservices/aws-sdk-for-php": "1.5.*",
                 "liip/imagine-bundle": "0.9.*",
+                "rackspace/php-opencloud": "1.6.*",
                 "sonata-project/doctrine-orm-admin-bundle": ">=2.2.1"
             },
             "type": "symfony-bundle",
@@ -2652,7 +2653,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2013-09-25 13:34:10"
+            "time": "2013-10-10 09:58:36"
         },
         {
             "name": "sonata-project/notification-bundle",
@@ -3062,16 +3063,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.5",
+            "version": "v2.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "aa5626cd2a359567c948ebdeeca68d948640302f"
+                "reference": "d0597156c4c03ceca039f6b7770a47397ba295f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/aa5626cd2a359567c948ebdeeca68d948640302f",
-                "reference": "aa5626cd2a359567c948ebdeeca68d948640302f",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/d0597156c4c03ceca039f6b7770a47397ba295f0",
+                "reference": "d0597156c4c03ceca039f6b7770a47397ba295f0",
                 "shasum": ""
             },
             "require": {
@@ -3166,7 +3167,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-09-27 07:31:40"
+            "time": "2013-10-10 13:24:22"
         },
         {
             "name": "twig/extensions",
