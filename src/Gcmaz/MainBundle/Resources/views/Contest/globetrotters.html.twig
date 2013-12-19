@@ -12,6 +12,12 @@
 <meta property="og:title" content="Win Tickets to the Harlem Globetrotters in Prescott on Feb 6, 2014"/> 
 <meta property="og:description" content="Submit your trick shot video to win Tickets to the Harlem Globetrotters in Prescott on Feb 6, 2014"/>
 <meta name="keywords" content="harlem globetrotters, prescott, az, trick shot, win tickets" />
+<link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+<link rel="icon" href="{{ asset('favicon.png') }}">
+<!--[if IE]><link rel="shortcut icon" href="{{ asset('favicon.ico') }}"><![endif]-->
+<!-- or, set /favicon.ico for IE10 win -->
+<meta name="msapplication-TileColor" content="#4c4c4c">
+<meta name="msapplication-TileImage" content="{{ asset('favicon.png') }}">
 <meta charset="UTF-8" />
 <link type="text/css" rel="stylesheet" href="{{asset('css/styles.css')}}"/>
 <style type="text/css">
@@ -20,20 +26,16 @@
         margin-left: -100px !important;
         width:300px !important;
     }
-    /* move chs fb widget to left when LIKE dialog opens */
-    .fb2 iframe.fb_iframe_widget_lift {
-        margin-left:-120px;
-    }
     body{background:#000;}
     .video-entry{margin:10px auto;border:1px solid #b0b5b9;padding:10px;width:600px;background-color:#c2c6c9;text-align:center;}
     .vid-title{color:#000;text-align: center;margin:5px auto;font-size:1em;font-weight:600;}
     .hg-sponsors a{text-decoration:none;}
     .hg-sponsors a img{padding:5px 0;}
     #sendbox{z-index:100;margin:0 auto;width:100%;padding:0;text-align:center;position:relative;height:0px;top:-100;color:#999;opacity:0; background-color:#ccc;filter: Alpha(Opacity=0); /* IE7 */}
-    a.sendbtn{display:inline-block;color:#fff;padding:10px 20px;margin-top:5px;font-weight:600;font-size:1.2em;text-decoration: none;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#c00;}
+    a.sendbtn{float:right;color:#fff;padding:10px 20px;margin:10px 20px 0 0;font-weight:600;font-size:1.2em;text-decoration: none;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#c00;}
     .sendarea{cursor:pointer;width:1000px;height:68px;background:#000;padding-top:5px;}
     form.entryform { font-size: 14px;color:#000; margin-top:25px;}
-    form.entryform div { clear: left; margin-bottom: 10px; }
+    form.entryform div { clear: left; margin-bottom: 10px; width:70%;}
     form.entryform label { float: left; margin-right: 10px; text-align: right; width: 300px; font-weight: bold; vertical-align: top; padding-top: 10px; color:#000; }
     form.entryform input[type="text"],
     form.entryform input[type="email"],
@@ -41,7 +43,7 @@
         { width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
     form.entryform select { width:350px; line-height: 26px; font-size: 20px; min-height: 26px; }
     form.entryform textarea { width: 350px; height: 150px; line-height: 26px; font-size: 20px; }
-    form.entryform input[type="submit"] { margin-left: 160px; width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+    form.entryform input[type="submit"] { width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
     form.entryform ul li { color: #000; margin-bottom: 5px; }
 </style>
 <script type="text/javascript" src="{{ asset('scripts/jquery-1.9.1.min.js') }}"></script>
@@ -61,10 +63,15 @@
 </head>
 <body class="centered">
     <div class="centered" style="width:1000px;background:#fff;overflow:auto;">
-        <img src="{{asset('images/splash/hg-top.jpg')}}" width="1000" height="200" alt="Win Tickets to the Harlem Globtrotters" />
+        <img src="{{asset('images/splash/hg-top.jpg')}}" width="1000" height="200" alt="Win Tickets to the Harlem Globtrotters" usemap="#hg"/>
         <div class="sendarea">
-            <img src="{{asset('images/splash/hg-win-tix.gif')}}" width="577" height="56" alt="Win Tickets to the Harlem Globtrotters" align="left"/>
+            <img src="{{asset('images/splash/hg-win-tix.gif')}}" width="505" height="56" alt="Win Tickets to the Harlem Globtrotters" align="left"/>
+            <p style="width:230px;color:#fff;display:inline-block;line-height:1.5;text-align:left;margin-top:7px;font-weight:600;">
+                Entries Accepted <span class="yellow">Jan 13-26</span>
+                Voting Week <span class="yellow">Jan 27 - Feb 2</span>
+            </p>
             <a class="sendbtn">Enter Here &raquo;</a>
+            <br class="clear"/>
         </div>
         {% for flashMessage in app.session.flashbag.get('sendlinknotice') %}
             <div class="notice">
@@ -101,7 +108,7 @@
             {# START #}
             <div class="video-entry">
                 <p class="vid-title">Example Entry #0</p>
-                <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'trick-shot-entry'}) }}/0" colorscheme="dark" data-send="true" data-width="300" data-show-faces="true" data-font="arial" style="margin-left:-10px;"></div>
+                <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'trick-shot-entry'}) }}/0" colorscheme="light" data-send="true" data-width="300" data-show-faces="false" data-font="arial" style="margin-left:-10px;"></div>
                 <br/>
                 <iframe width="560" height="315" src="//www.youtube.com/embed/JC0xI9nb54Y" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -109,7 +116,7 @@
             {# START #}
             <div class="video-entry">
                 <p class="vid-title">Example Entry #100</p>
-                <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'trick-shot-entry'}) }}/100" colorscheme="dark" data-send="true" data-width="300" data-show-faces="true" data-font="arial" style="margin-left:-10px;"></div>
+                <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'trick-shot-entry'}) }}/100" colorscheme="light" data-send="true" data-width="300" data-show-faces="false" data-font="arial" style="margin-left:-10px;"></div>
                 <br/>
                 <iframe width="420" height="315" src="//www.youtube.com/embed/EXPOfStElLA" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -135,6 +142,9 @@
         </div>
         <br class="clear"/>
     </div>
+    <div class="centered" style="height:50px;width:1000px;background:#ccc;padding-top:20px;">
+        <a href="/legal/GeneralContestRules.pdf" style="color:#666;">Rules</p>
+    </div>
 <script>
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -156,5 +166,8 @@
             });
     });
 </script>
+<map name="hg">
+    <area shape="rect" coords="0,0,360,200" href="http://www.harlemglobetrotters.com" target="_blank" alt="The Harlem Globetrotters" /> 
+</map>
 </body>
 </html>
