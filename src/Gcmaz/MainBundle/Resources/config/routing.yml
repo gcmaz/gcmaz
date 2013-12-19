@@ -6,3 +6,13 @@ gcm_contact:
     path: /contact/great-circle-media
     defaults: { _controller: GcmazMainBundle:Page:contact }
 
+gcm_splash:
+    path: /info/{splash}
+    defaults: { _controller: GcmazMainBundle:Splash:splash, splash: 'default' }
+    methods: [GET|POST]
+    
+gcm_contest:
+    path: /contest/{contest}/{id}
+    defaults: { _controller: GcmazMainBundle:Contest:contest, contest: 'default', id: 'null' }
+    methods: [GET|POST]
+    

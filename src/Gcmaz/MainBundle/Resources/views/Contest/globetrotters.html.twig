@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# greatcirclemedia: http://ogp.me/ns/fb/greatcirclemedia#" >
+<head>
+<title>Win Tickets to the Harlem Globetrotters in Prescott on Feb 6, 2014</title>
+<meta name="description" content="Submit your trick shot video to win Tickets to the Harlem Globetrotters in Prescott on Feb 6, 2014"</meta>
+<meta property="og:site_name" content="http://gcmaz.com" />
+<meta property="fb:admins" content="100003228578475" />
+<meta property="fb:app_id" content="651824251537122" />
+<meta property="og:type" content="greatcirclemedia:contest" />
+<meta property="og:image" content="http://www.gcmaz.com{{ asset('images/splash/hg-top.jpg') }}"/>
+<meta property="og:url" content="http://www.gcmaz.com{{ path('gcm_contest', {'contest': 'trick-shot'}) }}"/>
+<meta property="og:title" content="Win Tickets to the Harlem Globetrotters in Prescott on Feb 6, 2014"/> 
+<meta property="og:description" content="Submit your trick shot video to win Tickets to the Harlem Globetrotters in Prescott on Feb 6, 2014"/>
+<meta name="keywords" content="harlem globetrotters, prescott, az, trick shot, win tickets" />
+<meta charset="UTF-8" />
+<link type="text/css" rel="stylesheet" href="{{asset('css/styles.css')}}"/>
+<style type="text/css">
+    /* move chs fb widget to left when SEND dialog opens */
+    .fb_edge_comment_widget {
+        margin-left: -100px !important;
+        width:300px !important;
+    }
+    /* move chs fb widget to left when LIKE dialog opens */
+    .fb2 iframe.fb_iframe_widget_lift {
+        margin-left:-120px;
+    }
+    body{background:#000;}
+    .video-entry{margin:10px auto;border:1px solid #b0b5b9;padding:10px;width:600px;background-color:#c2c6c9;text-align:center;}
+    .vid-title{color:#000;text-align: center;margin:5px auto;font-size:1em;font-weight:600;}
+    .hg-sponsors a{text-decoration:none;}
+    .hg-sponsors a img{padding:5px 0;}
+    #sendbox{z-index:100;margin:0 auto;width:100%;padding:0;text-align:center;position:relative;height:0px;top:-100;color:#999;opacity:0; background-color:#ccc;filter: Alpha(Opacity=0); /* IE7 */}
+    a.sendbtn{display:inline-block;color:#fff;padding:10px 20px;margin-top:5px;font-weight:600;font-size:1.2em;text-decoration: none;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#c00;}
+    .sendarea{cursor:pointer;width:1000px;height:68px;background:#000;padding-top:5px;}
+    form.entryform { font-size: 14px;color:#000; margin-top:25px;}
+    form.entryform div { clear: left; margin-bottom: 10px; }
+    form.entryform label { float: left; margin-right: 10px; text-align: right; width: 300px; font-weight: bold; vertical-align: top; padding-top: 10px; color:#000; }
+    form.entryform input[type="text"],
+    form.entryform input[type="email"],
+    form.entryform input[type="url"]
+        { width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+    form.entryform select { width:350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+    form.entryform textarea { width: 350px; height: 150px; line-height: 26px; font-size: 20px; }
+    form.entryform input[type="submit"] { margin-left: 160px; width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+    form.entryform ul li { color: #000; margin-bottom: 5px; }
+</style>
+<script type="text/javascript" src="{{ asset('scripts/jquery-1.9.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/common.js') }}"></script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38877504-1']);
+    _gaq.push(['_setDomainName', 'gcmaz.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body class="centered">
+    <div class="centered" style="width:1000px;background:#fff;overflow:auto;">
+        <img src="{{asset('images/splash/hg-top.jpg')}}" width="1000" height="200" alt="Win Tickets to the Harlem Globtrotters" />
+        <div class="sendarea">
+            <img src="{{asset('images/splash/hg-win-tix.gif')}}" width="577" height="56" alt="Win Tickets to the Harlem Globtrotters" align="left"/>
+            <a class="sendbtn">Enter Here &raquo;</a>
+        </div>
+        {% for flashMessage in app.session.flashbag.get('sendlinknotice') %}
+            <div class="notice">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+        <div id="sendbox" style="overflow: hidden;">
+            <p style="font-size:1.2em;font-weight:700;color:#000;padding:10px;">Send us a link to your trick shot video on YouTube that we can embed here.</p>
+            <form action="{{ path('gcm_contest', {'contest':'trick-shot'}) }}" method="post" {{ form_enctype(form) }} class="entryform">
+                  {{ form_errors(form) }}
+                  {{ form_row(form.name) }}
+                  {{ form_row(form.email) }}
+                  {{ form_row(form.phone) }}
+                  <div>
+                  {{ form_label(form.where, 'City') }}
+                  {{ form_errors(form.where) }}
+                  {{ form_widget(form.where) }}
+                  </div>
+                  <div>
+                  {{ form_label(form.link, 'Link to video') }}
+                  {{ form_errors(form.link) }}
+                  {{ form_widget(form.link) }}
+                  </div>
+                  {{ form_rest(form) }}
+                  <input type="submit" value="Submit" />
+              </form>
+              <br class="clear"/>
+        </div>
+        <div style="float:left;width:700px;">
+            <p style="padding:20px;font-weight:500;line-height:1.4;">
+                Vote for your favorite trick shots below by clicking the "Like" button.  The top 4 videos with the most "Likes" will each win a pair of VIP Magic Passes to see the Harlem Globetrotters at Tim's Toyota Center in Prescott Valley on 2/6/14
+            </p>
+            <p class="centered" style="font-size:1.5em;font-weight:600;">The Entrants:</p>
+            {# START #}
+            <div class="video-entry">
+                <p class="vid-title">Example Entry #0</p>
+                <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'trick-shot-entry'}) }}/0" colorscheme="dark" data-send="true" data-width="300" data-show-faces="true" data-font="arial" style="margin-left:-10px;"></div>
+                <br/>
+                <iframe width="560" height="315" src="//www.youtube.com/embed/JC0xI9nb54Y" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {# END #}
+            {# START #}
+            <div class="video-entry">
+                <p class="vid-title">Example Entry #100</p>
+                <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'trick-shot-entry'}) }}/100" colorscheme="dark" data-send="true" data-width="300" data-show-faces="true" data-font="arial" style="margin-left:-10px;"></div>
+                <br/>
+                <iframe width="420" height="315" src="//www.youtube.com/embed/EXPOfStElLA" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {# END #}
+        </div>
+        <div class="hg-sponsors" style="float:right;width:300px;padding-top:20px;">
+            {# SPONSORS #}
+            <a href="http://www.timstoyotacenter.com/" target="_blank" class="">
+                <img src="{{asset('images/sponsors/tims-toyota-ctr.jpg')}}" width="231" height="57" alt="Tims Toyota Center" class="centered">
+            </a>
+            <a href="http://kaff.gcmaz.com" target="_blank">
+                <img src="{{asset('images/flagstaff-radio-kaff-country.jpg')}}" width="167" height="86" alt="Flagstaff Radio - KAFF Country 92.9" class="centered">
+            </a>
+            <a href="http://939themountain.gcmaz.com" target="_blank">
+                <img src="{{asset('images/flagstaff-radio-the-mountain.jpg')}}" width="116" height="100" alt="Flagstaff Radio - 93.9 The Mountain" class="centered">
+            </a>
+            <a href="http://magic991.gcmaz.com" target="_blank">
+                <img src="{{asset('images/prescott-radio-magic.jpg')}}" width="156" height="82" alt="Prescott Radio - Magic 99.1" class="centered">
+            </a>
+            <a href="http://funoldies.gcmaz.com" target="_blank">
+                <img src="{{asset('images/prescott-radio-oldies.jpg')}}" width="125" height="95" alt="Prescott Radio - Fun Oldies" class="centered">
+            </a>
+        </div>
+        <br class="clear"/>
+    </div>
+<script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=651824251537122";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+            $('.sendarea').click(function(){
+                    var $sendbox = $('#sendbox');
+                    if ($sendbox.height() > 0) {
+                            $sendbox.animate({ height : 0, opacity : 0, top : 0 });
+                    } else {
+                            $sendbox.animate({ height: 350, opacity : 100, top : 0 });
+                    }
+            });
+    });
+</script>
+</body>
+</html>
