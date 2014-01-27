@@ -34,8 +34,8 @@
     .hg-sponsors a img{padding:5px 0;}
     #sendbox{z-index:100;margin:0 auto;width:100%;padding:0;text-align:center;position:relative;height:0px;top:-100;color:#999;opacity:0; background-color:#ccc;filter: Alpha(Opacity=0); /* IE7 */}
     a.sendbtn{float:right;color:#fff;padding:10px 20px;margin:10px 20px 0 0;font-weight:600;font-size:1.2em;text-decoration: none;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#c00;}
-    .sendarea{cursor:pointer;width:1000px;height:68px;background:#000;padding-top:5px;}
-    form.entryform { font-size: 14px;color:#000; margin-top:25px;}
+    .sendarea{ {#cursor:pointer;#} width:1000px;height:68px;background:#000;padding-top:5px;}
+    {# form.entryform { font-size: 14px;color:#000; margin-top:25px;}
     form.entryform div { clear: left; margin-bottom: 10px; width:70%;}
     form.entryform label { float: left; margin-right: 10px; text-align: right; width: 300px; font-weight: bold; vertical-align: top; padding-top: 10px; color:#000; }
     form.entryform input[type="text"],
@@ -45,7 +45,7 @@
     form.entryform select { width:350px; line-height: 26px; font-size: 20px; min-height: 26px; }
     form.entryform textarea { width: 350px; height: 150px; line-height: 26px; font-size: 20px; }
     form.entryform input[type="submit"] { width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
-    form.entryform ul li { color: #000; margin-bottom: 5px; }
+    form.entryform ul li { color: #000; margin-bottom: 5px; } #}
 </style>
 <script type="text/javascript" src="{{ asset('scripts/jquery-1.9.1.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('scripts/common.js') }}"></script>
@@ -68,10 +68,10 @@
         <div class="sendarea">
             <img src="{{asset('images/splash/hg-win-tix.gif')}}" width="505" height="56" alt="Win Tickets to the Harlem Globtrotters" align="left"/>
             <p style="width:230px;color:#fff;display:inline-block;line-height:1.5;text-align:left;margin-top:7px;font-weight:600;">
-                Entries Accepted <span class="yellow">Jan 13-26</span>
+                {#Entries Accepted <span class="yellow">Jan 13-26</span>#}
                 Voting Week <span class="yellow">Jan 27 - Feb 2</span>
             </p>
-            <a class="sendbtn">Enter Here &raquo;</a>
+            {#<a class="sendbtn">Enter Here &raquo;</a>#}
             <br class="clear"/>
         </div>
         {% for flashMessage in app.session.flashbag.get('sendlinknotice') %}
@@ -79,7 +79,7 @@
                 {{ flashMessage }}
             </div>
         {% endfor %}
-        <div id="sendbox" style="overflow: hidden;">
+        {#<div id="sendbox" style="overflow: hidden;">
             <p style="font-size:1.2em;font-weight:700;color:#000;padding:10px;">Send us a link to your trick shot video on YouTube that we can embed here.</p>
             <form action="{{ path('gcm_contest', {'contest':'trick-shot'}) }}" method="post" {{ form_enctype(form) }} class="entryform">
                   {{ form_errors(form) }}
@@ -100,7 +100,7 @@
                   <input type="submit" value="Submit" />
               </form>
               <br class="clear"/>
-        </div>
+        </div>#}
         <div style="float:left;width:700px;">
             <p style="padding:20px;font-weight:500;line-height:1.4;">
                 Vote for your favorite trick shots below by clicking the "Like" button.  The top 4 videos with the most "Likes" will each win a pair of VIP Magic Passes to see the Harlem Globetrotters at Tim's Toyota Center in Prescott Valley on 2/6/14
@@ -115,12 +115,20 @@
             </div>
             {# END #}
             {# START #}
-            {#<div class="video-entry">
-                <p class="vid-title">Example Entry #100</p>
-                <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'trick-shot-entry'}) }}/100" colorscheme="light" data-send="true" data-width="300" data-show-faces="false" data-font="arial" style="margin-left:-10px;"></div>
+            <div class="video-entry">
+                <p class="vid-title">Trickshot by Sandy Pietz</p>
+                <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'trick-shot-entry'}) }}/2" colorscheme="light" data-send="true" data-width="300" data-show-faces="false" data-font="arial" style="margin-left:-10px;"></div>
                 <br/>
-                <iframe width="420" height="315" src="//www.youtube.com/embed/EXPOfStElLA" frameborder="0" allowfullscreen></iframe>
-            </div>#}
+                <iframe width="560" height="315" src="//www.youtube.com/embed/pzPzYhtmSM8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {# END #}
+            {# START #}
+            <div class="video-entry">
+                <p class="vid-title">Slam Dunk by Bryan Thunborg</p>
+                <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'trick-shot-entry'}) }}/3" colorscheme="light" data-send="true" data-width="300" data-show-faces="false" data-font="arial" style="margin-left:-10px;"></div>
+                <br/>
+                <iframe width="560" height="315" src="//www.youtube.com/embed/NUPmpydNTIU" frameborder="0" allowfullscreen></iframe>
+            </div>
             {# END #}
         </div>
         <div class="hg-sponsors" style="float:right;width:300px;padding-top:20px;">
@@ -158,7 +166,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
-<script type="text/javascript">
+{#<script type="text/javascript">
     $(document).ready(function(){
             $('.sendarea').click(function(){
                     var $sendbox = $('#sendbox');
@@ -169,7 +177,7 @@
                     }
             });
     });
-</script>
+</script>#}
 <map name="hg">
     <area shape="rect" coords="0,0,360,200" href="http://www.harlemglobetrotters.com" target="_blank" alt="The Harlem Globetrotters" /> 
 </map>
