@@ -11,12 +11,16 @@ class SplashController extends Controller
         switch($splash){
             // COULD RETURN LIST OF SPLASH PAGES
             case 'default' :
-                return $this->render('FunOldiesMainBundle:Splash:default.html.twig', array(
+                return $this->render('GcmazMainBundle:Splash:default.html.twig', array(
                     'splash' => $splash
                 ));
-             
+                
+            //  RENAISSANCE FAIRE TIX
+            case 'arizona-renaissance-faire' :
+                return $this->render('GcmazMainBundle:Splash:renaissancefaire.html.twig', array(
+                    'splash' => $splash
+                ));             
         }
-    }
-    
+    }  
 }
 ?>

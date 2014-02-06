@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{# doesnt use base twig templates because its not the same and I didn't give it a parent twig template #}
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# greatcirclemedia: http://ogp.me/ns/fb/greatcirclemedia#" >
+<head>
+<title>Arizona Renaissance Faire Discount Tickets On Sale Here</title>
+<meta name="description" content="Get Discounted Tickets to the Arizona Renaissance Faire Here"</meta>
+<meta property="og:site_name" content="http://gcmaz.com" />
+<meta property="fb:admins" content="100003228578475" />
+<meta property="fb:app_id" content="651824251537122" />
+<meta property="og:type" content="greatcirclemedia:event" />
+<meta property="og:image" content="http://www.gcmaz.com{{ asset('images/takeover/renaissance-faire-pic1.jpg') }}"/>
+<meta property="og:url" content="http://www.gcmaz.com{{ path('gcm_splash', {'splash': 'arizona-renaissance-faire'}) }}"/>
+<meta property="og:title" content="Discount Arizona Renaissance Faire Tickets On Sale Here"/> 
+<meta property="og:description" content="Get Discounted Tickets to the Arizona Renaissance Faire Here"/>
+<meta name="keywords" content="arizona renaissance faire, discount tickets" />
+<link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+<link rel="icon" href="{{ asset('favicon.png') }}">
+<!--[if IE]><link rel="shortcut icon" href="{{ asset('favicon.ico') }}"><![endif]-->
+<!-- or, set /favicon.ico for IE10 win -->
+<meta name="msapplication-TileColor" content="#4c4c4c">
+<meta name="msapplication-TileImage" content="{{ asset('favicon.png') }}">
+<meta charset="UTF-8" />
+<link type="text/css" rel="stylesheet" href="{{asset('css/styles.css')}}"/>
+<style type='text/css'>
+    body{background-image:url("{{asset('images/takeover/renaissance-faire.jpg')}}");background-position:top center;background-repeat: no-repeat;overflow:auto;}
+</style>
+<script type="text/javascript" src="{{ asset('scripts/jquery-1.9.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/common.js') }}"></script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47756322-1', 'gcmaz.com');
+  ga('send', 'pageview');
+  </script>
+</head>
+<body class="centered">
+<div id="fb-root"></div>
+<div class="centered" style="width:1000px;overflow:auto;">
+    <div style="width:100%;height:250px;">
+        <p style="font-weight:700;font-size:0.8em;margin:80px 20px 10px;float:right;">
+            <a href="http://www.royalfaires.com/arizona/index.php?option=com_content&view=article&id=2&Itemid=3" target="_blank" style="text-decoration:none;color:#cea43f;">Directions and Map &raquo;</a>
+        </p>
+        <br class='clear'/>
+    </div>
+    <div class="centered" style="width:100%;background:#fff;padding-top:5px;">
+        <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_splash', {'splash': 'arizona-renaissance-faire'}) }}" colorscheme="light" data-send="true" data-width="900" data-show-faces="false" data-font="arial" style="margin:3px auto;padding:0;"></div>
+        <p style="width:92%;font-weight:600;line-height:1.1;margin:20px auto;font-size:1.2em;">
+            The Arizona Renaissance Festival is a medieval amusement park, a 13-stage theater, a 30-acre circus, an arts and crafts fair, a jousting tournament and a feast -- all rolled into one non-stop, day-long family adventure!
+        </p>
+        <img src="{{asset('images/takeover/renaissance-faire-pic1.jpg')}}" width="332" height="265" alt="2014 Arizona Renaissance Faire Tickets" align="left" style="padding:10px;"/>
+        <img src="{{asset('images/takeover/renaissance-faire-pic2.jpg')}}" width="332" height="265" alt="2014 Arizona Renaissance Faire Tickets" align="right" style="padding:10px;"/>
+        <div class="centered" style="width:280px;margin-top:50px">
+            <p style="color:#c83d0f;font-size:1em;font-weight:700;line-height:1.3;margin:20px auto;">
+                During checkout, select "in store pickup" to pick them up in person and save on shipping!
+            </p>
+            {#PAYPAL BUY NOW#}
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="VDMQNAVNCCG4Q">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+            {# END PAYPAL BUY NOW#}
+            <p style="color:#474534;font-size:1em;font-weight:700;line-height:1.3;margin:20px auto;">
+                You can pick up tickets at the <a href="http://goo.gl/maps/ApYFr" target="_blank" style="text-decoration:none;color:#336699;margin:0 auto;">KAFF Radio Station, 1117 W. Route 66, Flagstaff, AZ 86001</a>
+            </p>
+        </div>
+        <br class="clear"/>
+    </div>
+<div id="ftr">
+    <p style="color:#8c9fb8;font-size:0.8em;padding:10px;margin:auto;">
+        Great Circle Media, 1117 W. Route 66, Flagstaff, AZ 86001
+    </p>
+    <div class="centered">
+        <a href="/"><img src="{{ asset('images/ftr-gcmaz-logo.png') }}" width="167" height="70" alt="Great Circle Media Arizona" style="padding-top:4px;"/></a>
+        <p style="color:#c7d1e1;font-size:12px;font-weight:bold;padding:0;margin:2px auto 0;">
+            Great Circle Media
+        </p>
+        <p style="color:#79818b;font-size:10px;font-weight:bold;padding:0;margin:2px auto;line-height:1.1;">
+                &copy; GuyAnn Corporation<br/>All Rights Reserved
+        </p>
+        <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
+            <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
+        </p>
+    </div>
+</div>
+</div>
+<script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=651824251537122";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+</html>
