@@ -1,0 +1,134 @@
+<?php
+
+namespace Gcmaz\MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
+/**
+ * Gcmaz\MainBundle\Entity\Photocontest
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Gcmaz\MainBundle\Entity\Repository\PhotocontestRepository")
+ * @ORM\HasLifecycleCallbacks
+ */
+class Photocontest
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     * @var string $name
+     * 
+     * @ORM\Column(name="name", type="string")
+     */
+    private $name;
+            
+    
+    /**
+     * @var string $description
+     *
+     * @ORM\Column(name="description", type="text", nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var Media $picture
+     *
+     * @ORM\OneToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Media", cascade={"all"})
+     */
+    private $picture;
+    
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    /**
+     * Set picture
+     *
+     * @param \Application\Sonata\MediaBundle\Entity\Media $picture
+     * @return Concert
+     */
+    public function setPicture(\Application\Sonata\MediaBundle\Entity\Media $picture = null)
+    {
+        $this->picture = $picture;
+    
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Application\Sonata\MediaBundle\Entity\Media 
+     */
+    public function getPicture()
+    {
+        return $this->picture;
+    }
+    
+    public function __toString()
+    {
+        return ($this->getName() === null) ? 'Photo' : (string) $this->getName();
+    }
+    
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Photocontest
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Photocontest
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+}

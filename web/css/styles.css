@@ -72,6 +72,7 @@ h2{
     text-shadow: 0 0 2px rgba(0,186,254,.8);
     padding: 10px;
 }
+h3{font-size:2em;font-weight:600;}
 a img { border:0;padding:0;margin:0;}
 img { height:auto; }
 .centered{
@@ -138,6 +139,10 @@ div.notice {
 }
 .unica{
     font-family: 'Unica One', cursive;
+    text-transform: uppercase;
+}
+.oswald{
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
 }
 .arial{font-family: Arial, sans-serif;}
@@ -280,7 +285,7 @@ ul.ftr-cities-list li{
 }
 a.listen-btn{
     float:right;
-    font-weight:700;
+    font-weight:500;
     color:#fff;
     font-size:1em;
     padding:3px 7px;

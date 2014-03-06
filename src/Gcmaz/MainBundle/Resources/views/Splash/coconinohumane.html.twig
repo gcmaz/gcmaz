@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{# doesnt use base twig templates because its not the same and I didn't give it a parent twig template #}
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# greatcirclemedia: http://ogp.me/ns/fb/greatcirclemedia#" >
+<head>
+<title>Adopt a Dog Month - Coconino Humane Association</title>
+<meta name="description" content="Adopt a Dog Month at Coconino Humane Association"</meta>
+<meta property="og:site_name" content="http://gcmaz.com" />
+<meta property="fb:admins" content="100003228578475" />
+<meta property="fb:app_id" content="651824251537122" />
+<meta property="og:type" content="greatcirclemedia:event" />
+<meta property="og:image" content="http://www.gcmaz.com{{ asset('images/splash/adopt-a-dog-month.jpg') }}"/>
+<meta property="og:url" content="http://www.gcmaz.com/adopt-a-dog-month"/>
+<meta property="og:title" content="Adopt a Dog Month - Coconino Humane Association"/> 
+<meta property="og:description" content="Adopt a Dog Month at Coconino Humane Association"/>
+<meta name="keywords" content="adopt a dog, Coconino Humane" />
+<link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+<link rel="icon" href="{{ asset('favicon.png') }}">
+<!--[if IE]><link rel="shortcut icon" href="{{ asset('favicon.ico') }}"><![endif]-->
+<!-- or, set /favicon.ico for IE10 win -->
+<meta name="msapplication-TileColor" content="#4c4c4c">
+<meta name="msapplication-TileImage" content="{{ asset('favicon.png') }}">
+<meta charset="UTF-8" />
+<link type="text/css" rel="stylesheet" href="{{asset('css/styles.css')}}"/>
+<style type="text/css">
+    div.adopt-a-dog{line-height:1.2}
+    div.adopt-a-dog strong{font-weight:bold}
+</style>
+<script type="text/javascript" src="{{ asset('scripts/jquery-1.9.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/common.js') }}"></script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47756322-1', 'gcmaz.com');
+  ga('send', 'pageview');
+  </script>
+</head>
+<body class="centered" style="background:#f2e6d0">
+<div id="fb-root"></div>
+<div class="centered" style="width:1000px;overflow:auto;background:#fff">
+    <div style="width:1000px;height:235px;background:#b3d6ff">
+        <img src="{{asset('images/splash/adopt-a-dog-month.png')}}" width="298" height="207" alt="Adopt a Dog Month">
+        <a href="http://www.coconinohumane.org/" target="_blank"  style="text-decoration:none">
+            <img src="{{asset('images/splash/coconino-humane.png')}}" width="145" height="93" alt="Adopt a Dog Month">
+        </a>
+        <a href="http://findlayhondaflagstaff.com/" target="_blank"  style="text-decoration:none">
+            <img src="{{asset('images/splash/findlay-honda.png')}}" width="139" height="88" alt="Adopt a Dog Month">
+        </a>
+    </div>
+    <div class="centered" style="float:left;width:750px;text-align:left">
+        <div style="margin:20px;border-right:2px solid #efefef">
+            <div style="margin:20px">
+                <div class="fb-like" data-href="http://www.gcmaz.com/adopt-a-dog-month" colorscheme="light" data-send="true" data-width="600" data-show-faces="false" data-font="arial" style="margin:3px auto;padding:10px 5px;"></div>
+                <h3 style="color:#cf682e">Adopt a Dog Month</h3>
+                <p style="margin:1% 0;padding:1% 0;">
+                    Brought to you by the <a href="http://www.coconinohumane.org/" target="_blank" class="blue" style="font-weight:bold">Coconino Humane Association</a> and <a href="http://findlayhondaflagstaff.com/" target="_blank" class="blue" style="font-weight:bold">Findlay Honda Flagstaff</a>
+                </p>
+                <hr style="height:1px;border:0;background:#efefef;" />
+                {% if entities == '' %}
+                    <div>
+                        <p>Sorry, no listings to display</p>
+                    </div>
+                {% else %}
+                    {% for entity in entities %}
+                        <div class="adopt-a-dog">
+                            <p class="red" style="font-size:1.6em;font-weight:bold;margin:10px 0;">{{ entity.name|raw }}</p>
+                            <img src="{% path entity.picture, 'med' %}" alt="{{ entity.name }}" width="300" height="auto" align="right" style="margin:10px"/>
+                            {{ entity.description|raw }}
+                            <br class="clear"/>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="sponsors" style="float:right;width:245px;padding-top:20px">
+        {# SPONSORS #}
+        <a href="http://kaff.gcmaz.com" target="_blank">
+            <img src="{{asset('images/flagstaff-radio-kaff-country.jpg')}}" width="167" height="86" alt="Flagstaff Radio - KAFF Country 92.9" class="centered" style="margin:15px auto;">
+        </a>
+        <a href="http://939themountain.gcmaz.com" target="_blank">
+            <img src="{{asset('images/flagstaff-radio-the-mountain.jpg')}}" width="116" height="100" alt="Flagstaff Radio - 93.9 The Mountain" class="centered" style="margin:15px auto;">
+        </a>
+        <a href="http://hits106.gcmaz.com" target="_blank">
+            <img src="{{asset('images/flagstaff-radio-hits-106.jpg')}}" width="130" height="97" alt="Hits 106" class="centered" style="margin:15px auto;">
+        </a>
+        <a href="http://country935.gcmaz.com" target="_blank">
+            <img src="{{asset('images/flagstaff-radio-country-93-5.jpg')}}" width="128" height="98" alt="Flagstaff Country 93-5" class="centered" style="margin:15px auto;">
+        </a>
+    </div>
+    <br class="clear"/>
+    <div id="ftr" style="background:#efefef">
+        <p style="color:#8c9fb8;font-size:0.8em;padding:10px;margin:auto;">
+            Great Circle Media, 1117 W. Route 66, Flagstaff, AZ 86001
+        </p>
+        <div class="centered">
+            <a href="/"><img src="{{ asset('images/ftr-gcmaz-logo.png') }}" width="167" height="70" alt="Great Circle Media Arizona" style="padding-top:4px;"/></a>
+            <p style="color:#c7d1e1;font-size:12px;font-weight:bold;padding:0;margin:2px auto 0;">
+                Great Circle Media
+            </p>
+            <p style="color:#79818b;font-size:10px;font-weight:bold;padding:0;margin:2px auto;line-height:1.1;">
+                    &copy; GuyAnn Corporation<br/>All Rights Reserved
+            </p>
+            <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
+                <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=651824251537122";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+</html>

@@ -230,6 +230,7 @@ sonata_media:
                 - sonata.media.provider.image
             formats:
                 small: { width: 150 , quality: 70}
+                med: { width: 300 , quality: 80}
                 big:   { width: 500 , quality: 70}
  
     cdn:

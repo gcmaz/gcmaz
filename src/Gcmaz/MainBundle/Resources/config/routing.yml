@@ -11,6 +11,11 @@ gcm_splash:
     defaults: { _controller: GcmazMainBundle:Splash:splash, splash: 'default' }
     methods: [GET|POST]
     
+gcm_adoptadog:
+    path: /adopt-a-dog-month
+    defaults: { _controller: GcmazMainBundle:Splash:adopt }
+    methods: [GET|POST]
+    
 gcm_contest:
     path: /contest/{contest}/{id}
     defaults: { _controller: GcmazMainBundle:Contest:contest, contest: 'default', id: 'null' }
