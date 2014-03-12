@@ -2,8 +2,8 @@
 
 namespace Gcmaz\MainBundle\Controller;
 
-use Gcmaz\MainBundle\Entity\SendLink;
-use Gcmaz\MainBundle\Form\SendLinkType;
+use Gcmaz\MainBundle\Entity\Nominee;
+use Gcmaz\MainBundle\Form\NomineeType;
 use Swift_Message;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -18,10 +18,10 @@ class ContestController extends Controller
                     'contest' => $contest
                 ));
                 
-            // NOM-A-MOM
+            // NOM-A-MOM Nominee
             case 'nom-a-mom' :
-                $sendlink = new SendLink();
-                $form = $this->createForm(new SendLinkType(), $sendlink);
+                $nominee = new Nominee();
+                $form = $this->createForm(new NomineeType(), $nominee);
 
                 $request = $this->getRequest();
                 if ($request->getMethod() == 'POST') {
@@ -30,11 +30,11 @@ class ContestController extends Controller
                     if ($form->isValid()) {
                         //send
                         $message = Swift_Message::newInstance()
-                            ->setSubject('Trick Shot Video Entry')
-                            ->setFrom($sendlink->getEmail())
-                            ->setReplyTo($sendlink->getEmail())
+                            ->setSubject('Nom-a-Mom Entry')
+                            ->setFrom($nominee->getEmail())
+                            ->setReplyTo($nominee->getEmail())
                             ->setTo($this->container->getParameter('gcm.emails.contests'))
-                            ->setBody($this->renderView('GcmazMainBundle:Email:nomamom.txt.twig', array('sendlink' => $sendlink)));
+                            ->setBody($this->renderView('GcmazMainBundle:Email:nomamom.txt.twig', array('nominee' => $nominee)));
                         $this->get('mailer')->send($message);
 
                         $this->get('session')->getFlashBag()->add('nomamomnotice', 'Your entry is submitted.  Thank you for entering!!');
