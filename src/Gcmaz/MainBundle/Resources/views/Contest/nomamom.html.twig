@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{# doesnt use base twig templates because its not the same and I didn't give it a parent twig template #}
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# greatcirclemedia: http://ogp.me/ns/fb/greatcirclemedia#" >
+<head>
+<title>Nominate a Super-Mom - Mother's Day Contest</title>
+<meta name="description" content="Nominate a Super-Mom for year long prizes in this Mother's Day Contest"</meta>
+<meta property="og:site_name" content="http://gcmaz.com" />
+<meta property="fb:admins" content="100003228578475" />
+<meta property="fb:app_id" content="651824251537122" />
+<meta property="og:type" content="greatcirclemedia:contest" />
+<meta property="og:image" content="http://www.gcmaz.com{{ asset('images/splash/nom-a-mom.jpg') }}"/>
+<meta property="og:url" content="http://www.gcmaz.com{{ path('gcm_contest', {'contest': 'nom-a-mom'}) }}"/>
+<meta property="og:title" content="Nominate a Super-Mom - Mother's Day Contest"/> 
+<meta property="og:description" content="Nominate a Super-Mom for year long prizes in this Mother's Day Contest"/>
+<meta name="keywords" content="mothers day contest, nominate a mom, nom-a-mom" />
+<link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+<link rel="icon" href="{{ asset('favicon.png') }}">
+<!--[if IE]><link rel="shortcut icon" href="{{ asset('favicon.ico') }}"><![endif]-->
+<!-- or, set /favicon.ico for IE10 win -->
+<meta name="msapplication-TileColor" content="#4c4c4c">
+<meta name="msapplication-TileImage" content="{{ asset('favicon.png') }}">
+<meta charset="UTF-8" />
+<link type="text/css" rel="stylesheet" href="{{asset('css/styles.css')}}"/>
+<style type="text/css">
+    /* move chs fb widget to left when SEND dialog opens */
+    .fb_edge_comment_widget {
+        margin-left: -100px !important;
+        width:300px !important;
+    }
+    body{background:#000;}
+    .hg-sponsors a{text-decoration:none;}
+    .hg-sponsors a img{padding:5px 0;}
+    form.entryform { font-size: 14px;color:#000; margin-top:25px;}
+    form.entryform div { clear: left; margin-bottom: 10px; width:70%;}
+    form.entryform label { float: left; margin-right: 10px; text-align: right; width: 300px; font-weight: bold; vertical-align: top; padding-top: 10px; color:#000; }
+    form.entryform input[type="text"],
+    form.entryform input[type="email"],
+    form.entryform input[type="url"]
+        { width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+    form.entryform select { width:350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+    form.entryform textarea { width: 350px; height: 150px; line-height: 26px; font-size: 20px; }
+    form.entryform input[type="submit"] { width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+    form.entryform ul li { color: #000; margin-bottom: 5px; }
+</style>
+
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47756322-1', 'gcmaz.com');
+  ga('send', 'pageview');
+  </script>
+</head>
+<body class="centered">
+    <div class="centered" style="width:1000px;background:#fff;overflow:auto;">
+        <img src="{{('/images/splash/nom-a-mom.jpg')}}" width="1000" height="250" alt="Nom-a-Mom Nominate a Super-Mom for Mother's Day" class="centered" />
+        {% for flashMessage in app.session.flashbag.get('nomamomnotice') %}
+            <div class="notice">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+        <div style="float:left;width:700px;">
+            <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'nom-a-mom'}) }}" colorscheme="light" data-send="true" data-width="600" data-show-faces="false" data-font="arial" style="margin:10px;padding:0;"></div>
+            <p style="font-size:1.2em;font-weight:700;color:#000;padding:10px;">Your Nom-a-Mom Entry</p>
+            <form action="{{ path('gcm_contest', {'contest':'nom-a-mom'}) }}" method="post" {{ form_enctype(form) }} class="entryform">
+                  {{ form_errors(form) }}
+                  {{ form_row(form.name) }}
+                  {{ form_row(form.email) }}
+                  {{ form_row(form.phone) }}
+                  <div>
+                  {{ form_label(form.where, 'City') }}
+                  {{ form_errors(form.where) }}
+                  {{ form_widget(form.where) }}
+                  </div>
+                  <div>
+                  {{ form_label(form.link, 'Link to video') }}
+                  {{ form_errors(form.link) }}
+                  {{ form_widget(form.link) }}
+                  </div>
+                  {{ form_rest(form) }}
+                  <input type="submit" value="Submit" style="margin:10px;" />
+              </form>
+        </div>
+        <div class="hg-sponsors" style="float:right;width:300px;padding-top:20px;">
+            {# SPONSORS #}
+            <a href="http://kaff.gcmaz.com" target="_blank">
+                <img src="{{asset('images/flagstaff-radio-kaff-country.jpg')}}" width="167" height="86" alt="Flagstaff Radio - KAFF Country 92.9" class="centered">
+            </a>
+            <a href="http://939themountain.gcmaz.com" target="_blank">
+                <img src="{{asset('images/flagstaff-radio-the-mountain.jpg')}}" width="116" height="100" alt="Flagstaff Radio - 93.9 The Mountain" class="centered">
+            </a>
+            <a href="http://magic991.gcmaz.com" target="_blank">
+                <img src="{{asset('images/prescott-radio-magic.jpg')}}" width="156" height="82" alt="Prescott Radio - Magic 99.1" class="centered">
+            </a>
+            <a href="http://funoldies.gcmaz.com" target="_blank">
+                <img src="{{asset('images/prescott-radio-oldies.jpg')}}" width="125" height="95" alt="Prescott Radio - Fun Oldies" class="centered">
+            </a>
+        </div>
+        <br class="clear"/>
+    </div>
+    <br class="clear"/>
+    <div class="centered" style="height:50px;width:1000px;background:#ccc;padding-top:20px;">
+        <a href="/legal/GeneralContestRules.pdf" style="color:#666;">Rules</p>
+    </div>
+<script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=651824251537122";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+</html>
