@@ -3,6 +3,8 @@
 namespace Gcmaz\MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Gcmaz\CmsBundle\Entity\Photocontest;
+
 
 class SplashController extends Controller
 {

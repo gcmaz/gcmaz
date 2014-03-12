@@ -6,13 +6,18 @@ use Symfony\Component\Validator\Mapping\ClassMetadata;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Email;
 
-
 /**
- * Gcmaz\MainBundle\Entity\Nominee
  * @ORM\Entity
  */
 class Nominee
 {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+    
     protected $nominee;
     
     protected $name;
@@ -147,4 +152,13 @@ class Nominee
                 
     }
     
+     /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

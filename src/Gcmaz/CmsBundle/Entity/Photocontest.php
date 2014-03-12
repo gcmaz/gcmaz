@@ -5,10 +5,10 @@ namespace Gcmaz\CmsBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Gcmaz\CmsBundle\Entity\Pet
+ * Gcmaz\CmsBundle\Entity\Photocontest
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\PetRepository")
+ * @ORM\Entity(repositoryClass="Gcmaz\CmsBundle\Entity\PhotocontestRepository")
  * @ORM\HasLifecycleCallbacks
  */
 class Photocontest
@@ -69,7 +69,7 @@ class Photocontest
      * Set name
      *
      * @param string $name
-     * @return Pet
+     * @return Photocontest
      */
     public function setName($name)
     {
@@ -92,7 +92,7 @@ class Photocontest
      * Set description
      *
      * @param string $description
-     * @return Pet
+     * @return Photocontest
      */
     public function setDescription($description)
     {
@@ -115,7 +115,7 @@ class Photocontest
      * Set creationDate
      *
      * @param \DateTime $creationDate
-     * @return Pet
+     * @return Photocontest
      */
     public function setCreationDate($creationDate)
     {
@@ -138,7 +138,7 @@ class Photocontest
      * Set author
      *
      * @param \Gcmaz\UserBundle\Entity\User $author
-     * @return Pet
+     * @return Photocontest
      */
     public function setAuthor(\Gcmaz\UserBundle\Entity\User $author = null)
     {
@@ -161,7 +161,7 @@ class Photocontest
      * Set picture
      *
      * @param \Application\Sonata\MediaBundle\Entity\Media $picture
-     * @return Pet
+     * @return Photocontest
      */
     public function setPicture(\Application\Sonata\MediaBundle\Entity\Media $picture = null)
     {
