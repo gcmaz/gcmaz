@@ -12,4 +12,15 @@ use Doctrine\ORM\EntityRepository;
  */
 class PhotocontestRepository extends EntityRepository
 {
+    public function getPhotocontest()
+    //$gid is above param passed in if narrowing
+    {
+        $qb = $this->createQueryBuilder('x')
+                ->select('x')
+                ;
+                
+        
+        return $qb->getQuery()
+                       ->getResult();
+    }
 }

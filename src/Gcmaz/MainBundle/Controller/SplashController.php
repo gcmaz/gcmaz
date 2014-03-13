@@ -35,7 +35,7 @@ class SplashController extends Controller
   
     private function getDogRepository() {
         $em = $this->getDoctrine()->getManager();
-        $entities = $em->getRepository('GcmazMainBundle:Photocontest');
+        $entities = $em->getRepository('GcmazCmsBundle:Photocontest');
         if(!$entities){
             //throw $this->createNotFoundException('Unable to gather data');
             $entities = '';
