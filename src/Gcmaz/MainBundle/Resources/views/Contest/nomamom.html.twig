@@ -28,8 +28,8 @@
         width:300px !important;
     }
     body{background:#000;}
-    .hg-sponsors a{text-decoration:none;}
-    .hg-sponsors a img{padding:5px 0;}
+    .sponsors a{text-decoration:none;}
+    .sponsors a img{padding:5px 0; margin:5px auto; height:auto;}
     form.entryform { font-size: 14px;color:#000; margin-top:25px;}
     form.entryform div { clear: left; margin-bottom: 10px; }
     form.entryform label { float: left; margin-right: 10px; text-align: right; width: 300px; font-weight: bold; vertical-align: top; padding-top: 10px; color:#000; }
@@ -44,6 +44,7 @@
     form.entryform input.checkbox{margin-top:3px;}
     .chck-bxs div {height:30px;}
     .chck-bxs div label { clear:both;padding-top:0}
+    .prizeinfo{background:#def2f5;border-radius:9px;-webkit-border-radius:9px;-moz-border-radius:9px;width:90%;padding:20px 0}
 </style>
 
 <script type="text/javascript">
@@ -67,8 +68,10 @@
         <div style="float:left;width:700px;">
             <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'nom-a-mom'}) }}" colorscheme="light" data-send="true" data-width="600" data-show-faces="false" data-font="arial" style="margin:10px;padding:0;"></div>
             <p style="font-size:1.2em;color:#000;padding:10px;">Do you know a Super-Mom?  Nominate her for our Super-Mom Contest where she will win a bunch of prizes showing her how much you appreciate her!</p>
-            <div style="background:#efefef;width:90%;height:200px;" class="centered">
-                Prize Info
+            <div class="prizeinfo centered">
+                <h4 class="red">Prize Includes:</h4>
+                <p>$75 in Flowers from Watters Garden Center</p>
+                <p></p>
             </div>
             <form action="{{ path('gcm_contest', {'contest':'nom-a-mom'}) }}" method="post" {{ form_enctype(form) }} class="entryform">
                   {{ form_errors(form) }}
@@ -106,20 +109,26 @@
                   <input type="submit" value="Submit" style="float:right;margin:20px;" />
               </form>
         </div>
-        <div class="hg-sponsors" style="float:right;width:300px;padding-top:20px;">
+        <div class="sponsors" style="float:right;width:300px;padding-top:20px;">
             {# SPONSORS #}
             <a href="http://kaff.gcmaz.com" target="_blank">
-                <img src="{{asset('images/flagstaff-radio-kaff-country.jpg')}}" width="167" height="86" alt="Flagstaff Radio - KAFF Country 92.9" class="centered">
+                <img src="{{asset('images/flagstaff-radio-kaff-country.jpg')}}" width="145" height="auto" alt="Flagstaff Radio - KAFF Country 92.9" class="centered">
             </a>
             <a href="http://hits106.gcmaz.com" target="_blank">
-                <img src="{{asset('images/flagstaff-radio-hits-106.jpg')}}" width="130" height="97" alt="Flagstaff Radio - Hits 106" class="centered">
+                <img src="{{asset('images/flagstaff-radio-hits-106.jpg')}}" width="120" height="auto" alt="Flagstaff Radio - Hits 106" class="centered">
             </a>
             <a href="http://magic991.gcmaz.com" target="_blank">
-                <img src="{{asset('images/prescott-radio-magic.jpg')}}" width="156" height="82" alt="Prescott Radio - Magic 99.1" class="centered">
+                <img src="{{asset('images/prescott-radio-magic.jpg')}}" width="135" height="auto" alt="Prescott Radio - Magic 99.1" class="centered">
             </a>
             <a href="http://funoldies.gcmaz.com" target="_blank">
-                <img src="{{asset('images/prescott-radio-oldies.jpg')}}" width="125" height="95" alt="Prescott Radio - Fun Oldies" class="centered">
+                <img src="{{asset('images/prescott-radio-oldies.jpg')}}" width="125" height="auto" alt="Prescott Radio - Fun Oldies" class="centered">
             </a>
+            <a href="http://wattersgardencenter.com/" target="_blank">
+                <img src="{{asset('images/sponsors/watters-garden-ctr.jpg')}}" width="145" height="auto" alt="Watters Garden Center" class="centered" style="margin:5px auto">
+            </a>
+            <a href="http://www.cornerfeedandtack.com/‎" target="_blank">
+                <img src="{{asset('images/sponsors/corner-feed-tack.jpg')}}" width="155" height="auto" alt="Corner Feed and Tack" class="centered" style="margin:10px auto">
+            </a>  
         </div>
         <br class="clear"/>
     </div>
