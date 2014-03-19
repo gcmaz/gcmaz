@@ -44,7 +44,7 @@
     form.entryform input.checkbox{margin-top:3px;}
     .chck-bxs div {height:30px;}
     .chck-bxs div label { clear:both;padding-top:0}
-    .prizeinfo{background:#def2f5;border-radius:9px;-webkit-border-radius:9px;-moz-border-radius:9px;width:90%;padding:20px 0;font-size:1.2em;font-weight:600;line-height:1.3;}
+    .prizeinfo{background:#def2f5;border-radius:9px;-webkit-border-radius:9px;-moz-border-radius:9px;width:90%;padding:20px 0;font-size:1.2em;font-weight:600;line-height:1.5;}
 </style>
 
 <script type="text/javascript">
@@ -72,7 +72,8 @@
                 <h4 class="red">Prize Includes:</h4>
                 <p>$75 in Flowers from <a href="http://wattersgardencenter.com/" target="_blank">Watters Garden Center</a></p>
                 <p>$75 Gift Certificate to Massage Envy from <a href="http://www.prescottspas.com/" target="_blank">Prescott Spas</a></p>
-                <p></p>
+                <p>$100 Gift Certificate to <a href="http://www.cornerfeedandtack.com/Welcome.html" target="_blank">Corner Feed and Tack</a></p>
+                <p>2 Night Stay at <a href="http://tropicanax.com/" target="_blank">Tropicana Laughlin</a></p>
             </div>
             <form action="{{ path('gcm_contest', {'contest':'nom-a-mom'}) }}" method="post" {{ form_enctype(form) }} class="entryform">
                   {{ form_errors(form) }}
@@ -132,6 +133,9 @@
             </a>
             <a href="http://www.prescottspas.com/" target="_blank">
                 <img src="{{asset('images/sponsors/prescott-spas.jpg')}}" width="175" height="auto" alt="Prescott Spas" class="centered" style="margin:15px auto">
+            </a>
+            <a href="http://tropicanax.com/" target="_blank">
+                <img src="{{asset('images/sponsors/tropicana-laughlin.jpg')}}" width="155" height="auto" alt="Tropicana Laughlin" class="centered" style="margin:15px auto">
             </a>
             {#<a href="http://www.massageenvy.com/clinics/AZ/Prescott.aspx" target="_blank">
                 <img src="{{asset('images/sponsors/massage-envy.jpg')}}" width="165" height="auto" alt="Massage Envy" class="centered" style="margin:15px auto">
