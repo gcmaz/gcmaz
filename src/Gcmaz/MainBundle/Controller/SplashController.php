@@ -17,6 +17,12 @@ class SplashController extends Controller
                     'splash' => $splash
                 ));
                         
+            //  TEACHERS APP NIGHT  
+            case 'teachers-appreciation-night' :
+                return $this->render('GcmazMainBundle:Splash:teachersnight.html.twig', array(
+                    'splash' => $splash
+                ));
+                
             //  RENAISSANCE FAIRE TIX
             case 'arizona-renaissance-faire' :
                 return $this->render('GcmazMainBundle:Splash:renaissancefaire.html.twig', array(

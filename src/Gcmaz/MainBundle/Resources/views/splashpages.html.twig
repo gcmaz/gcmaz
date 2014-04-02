@@ -1,0 +1,110 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Great Circle Media Arizona{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Great Circle Media Arizona" />
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="Great Circle Media, Great Circle Radio"  />
+{% endblock %}
+    
+{% block favicons %}
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+    <link rel="icon" href="{{ asset('favicon.png') }}">
+    <!--[if IE]><link rel="shortcut icon" href="{{ asset('favicon.ico') }}"><![endif]-->
+    <!-- or, set /favicon.ico for IE10 win -->
+    <meta name="msapplication-TileColor" content="#4c4c4c">
+    <meta name="msapplication-TileImage" content="{{ asset('favicon.png') }}">
+{% endblock %}
+    
+{% block styles %}
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/styles.css') }}" />
+    <link href='http://fonts.googleapis.com/css?family=Unica+One|Oswald:400,700' rel='stylesheet' type='text/css'>
+{% endblock %}
+    
+{% block ie_crap %}
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {filter: none;}
+  </style>
+<![endif]-->
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+{% endblock %}
+
+{% block js_top %}
+    <script type="text/javascript" src="{{ asset('scripts/jquery-1.9.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('scripts/common.js') }}"></script>
+{% endblock %}
+    
+{% block analytics %}
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47756322-1', 'gcmaz.com');
+  ga('send', 'pageview');
+</script>
+{% endblock %}
+      
+{% block menubar %}
+    <nav class="menu_box">
+        <ul class="dropdown">
+            <li class="headlink">
+                <a href="{{ path('gcm_homepage') }}">GREAT CIRCLE MEDIA</a>
+            </li>
+        </ul>
+        {#<ul class="dropdown">
+              <li class="headlink">
+                  <a href="{{ path('gcm_contact') }}">CONTACT US</a>
+              </li>
+          </ul>#}
+          <ul class="dropdown">
+              <li class="headlink">
+                  <a href="#">RADIO STATIONS</a>
+                  <ul>
+                      <li><a href="http://kaff.gcmaz.com">92.9 KAFF Country</a></li>
+                      <li><a href="http://939themountain.gcmaz.com">93.9 The Mountain</a></li>
+                      <li><a href="http://country935.gcmaz.com">Flagstaff Country 93-5/AM 930</a></li>
+                      <li><a href="http://hits106.gcmaz.com">Hits 106</a></li>
+                      <li><a href="http://magic991.gcmaz.com">Magic 99.1</a></li>
+                      <li><a href="http://funoldies.gcmaz.com">Fun Oldies</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </nav>
+{% endblock %}
+      
+{% block leftcol_logo %}{% endblock %}
+{% block leftcol_nav %}{% endblock %}
+{% block leftcol_ad %}{% endblock %}
+
+{% block leftcol_sponsors %}
+    <p> sponsors</p>
+{% endblock %}
+
+{% block content %}{% endblock%}
+
+{% block footer %}
+<div id="ftr">
+        <p style="color:#8c9fb8;font-size:0.8em;padding:10px;margin:auto;">
+            Great Circle Media, 1117 W. Route 66, Flagstaff, AZ 86001
+        </p>
+        <div class="centered">
+            <a href="/"><img src="{{ asset('images/ftr-gcmaz-logo.png') }}" width="167" height="70" alt="Great Circle Media Arizona" style="padding-top:4px;"/></a>
+            <p style="color:#79818b;font-size:10px;font-weight:bold;padding:0;margin:2px auto;line-height:1.1;">
+                    &copy; Great Circle Media - All Rights Reserved
+            </p>
+            <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
+                <a href="http://www.gcmaz.com/legal/GeneralContestRules.pdf" target="_blank" style="color:#79818b;text-decoration:none;">Contest Rules</a>
+                &nbsp; | &nbsp;
+                <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

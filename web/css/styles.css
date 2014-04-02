@@ -166,7 +166,7 @@ div.notice {
 /********** START MENU **************/
 .menu_box{ 
     background-color:#484f58;
-    height:20px;
+    height:40px;
 }
 ul.dropdown {
     position:relative;
@@ -185,17 +185,17 @@ ul.dropdown li a:hover				{ }
 ul.dropdown li a, ul.dropdown ul li a{
 	color:#fff;
 	text-decoration:none;
-	font-size:1.1em;
+	font-size:1em;
 	font-weight:600;
-	font-family: 'Unica One', cursive;
+	font-family: 'Oswald', cursive;
 	text-shadow:1px 1px 1px rgba(0,0,0,.3);
 	padding:3px 0;
 	display:block;
 }
 ul.dropdown ul 		{ width:230px;visibility:hidden;position:absolute;top:38px;left:15px;z-index:400;margin:2px 0;padding:0;border-top:0;}
-ul.dropdown ul li 		{ width:230px;text-align:left;z-index:500;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px; border:1px solid #232323; margin:0 auto;padding:0 0 6px 0;-webkit-box-shadow:  0px 7px 5px 0px rgba(0, 0, 0, .3);box-shadow:  0px 7px 5px 0px rgba(0, 0, 0, .3);}
-ul.dropdown ul li a		{ font-size:14px;background-color:#3953a4;border:1px solid #4b66b7;text-transform: uppercase;padding:3px;}
-ul.dropdown ul li a:hover	{ background-color:#5871bf;border:1px solid #6e86d2;}
+ul.dropdown ul li 		{ width:230px;text-align:left;z-index:500;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px; border:1px solid #484f58; margin:0 auto;padding:0 0 6px 0;-webkit-box-shadow:  0px 7px 5px 0px rgba(0, 0, 0, .3);box-shadow:  0px 7px 5px 0px rgba(0, 0, 0, .3);}
+ul.dropdown ul li a		{ font-size:14px;background-color:#484f58;border:1px solid #5a687a;text-transform: uppercase;padding:3px;font-weight:500}
+ul.dropdown ul li a:hover	{ background-color:#5a687a;border:1px solid #7c92ae;}
 .headlink { }
 a.login{
     float:right;
