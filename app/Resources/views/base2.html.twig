@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# fb:http://www.facebook.com/2008/fbml" >
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# greatcirclemedia: http://ogp.me/ns/fb/greatcirclemedia#" >
 <head>
 <title>{% block title %}{% endblock %}</title>
 {% block description %}{% endblock %}
@@ -13,18 +13,18 @@
 </head>
 <body class="gray centered">
 {% block menubar %}{% endblock %}
-<div id="wrapper_splash" class="centered">
-    <div class="inner_splash centered">
-        <div id="leftcol_splash">
+<div id="wrapper_l2" class="centered">
+    <div class="inner_l2 centered">
+        <div id="l2_leftcol">
             {% block content %}{% endblock %}
       </div>
-        <div id="rightcol_splash">
-            {% block splash_sponsors %}{% endblock %}
+        <div id="l2_rightcol">
+            {% block layout2_rightcol %}{% endblock %}
         </div>
     </div>
     <br class="clear"/>
 </div>
-<div id="footer_splash" class="centered">
+<div id="footer" class="centered">
 {% block footer %}{% endblock %}
 </div>
 {% block js_btm %}{% endblock %}
