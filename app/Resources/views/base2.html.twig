@@ -11,20 +11,21 @@
 {% block js_top %}{% endblock %}
 {% block analytics %}{% endblock %}
 </head>
-<body class="centered">
-<div id="wrapper" class="centered page">
-    <div class="bgtile centered">
-        <div id="leftcol">
-            {% block leftcol_logo %}{% endblock %}
-            {% block leftcol_nav %}{% endblock %}
-            {% block leftcol_ad %}{% endblock %}
-      </div>
-        <div id="rightcol">
+<body class="gray centered">
+{% block menubar %}{% endblock %}
+<div id="wrapper_splash" class="centered">
+    <div class="inner_splash centered">
+        <div id="leftcol_splash">
             {% block content %}{% endblock %}
+      </div>
+        <div id="rightcol_splash">
+            {% block splash_sponsors %}{% endblock %}
         </div>
     </div>
+    <br class="clear"/>
 </div>
-<div id="footer" class="centered">
+        <br class="clear"/>
+<div id="footer_splash" class="centered">
 {% block footer %}{% endblock %}
 </div>
 {% block js_btm %}{% endblock %}

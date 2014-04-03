@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends '::base2.html.twig' %}
 
 {% block title %}Great Circle Media Arizona{% endblock %}
 
@@ -79,32 +79,22 @@
           </ul>
       </nav>
 {% endblock %}
-      
-{% block leftcol_logo %}{% endblock %}
-{% block leftcol_nav %}{% endblock %}
-{% block leftcol_ad %}{% endblock %}
-
-{% block leftcol_sponsors %}
-    <p> sponsors</p>
-{% endblock %}
-
-{% block content %}{% endblock%}
 
 {% block footer %}
 <div id="ftr">
-        <p style="color:#8c9fb8;font-size:0.8em;padding:10px;margin:auto;">
-            Great Circle Media, 1117 W. Route 66, Flagstaff, AZ 86001
+    <p style="color:#8c9fb8;font-size:0.8em;padding:10px;margin:auto;">
+        Great Circle Media, 1117 W. Route 66, Flagstaff, AZ 86001
+    </p>
+    <div class="centered">
+        <a href="{{ path('gcm_homepage') }}"><img src="{{ asset('images/logo-gcmaz.png') }}" width="200" alt="Great Circle Media Arizona" style="height:auto;" ></a>
+        <p style="color:#79818b;font-size:10px;font-weight:bold;padding:0;margin:2px auto;line-height:1.1;">
+                &copy; Great Circle Media - All Rights Reserved
         </p>
-        <div class="centered">
-            <a href="/"><img src="{{ asset('images/ftr-gcmaz-logo.png') }}" width="167" height="70" alt="Great Circle Media Arizona" style="padding-top:4px;"/></a>
-            <p style="color:#79818b;font-size:10px;font-weight:bold;padding:0;margin:2px auto;line-height:1.1;">
-                    &copy; Great Circle Media - All Rights Reserved
-            </p>
-            <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
-                <a href="http://www.gcmaz.com/legal/GeneralContestRules.pdf" target="_blank" style="color:#79818b;text-decoration:none;">Contest Rules</a>
-                &nbsp; | &nbsp;
-                <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
-            </p>
-        </div>
+        <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
+            <a href="http://www.gcmaz.com/legal/GeneralContestRules.pdf" target="_blank" style="color:#79818b;text-decoration:none;">Contest Rules</a>
+            &nbsp; | &nbsp;
+            <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
+        </p>
     </div>
+</div>
 {% endblock %}

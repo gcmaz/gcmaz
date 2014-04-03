@@ -1,7 +1,31 @@
 {% extends 'GcmazMainBundle::splashpages.html.twig' %}
-    
+
 {% block content %}
-    <div style="height:800px">
-        asdf
+    <div class="splash arial">
+        <img src="{{asset('images/splash/teachers-app-night.jpg')}}" width="660" height="250" alt="Teachers Appreciation Night Prescott" class="img-responsive centered" style="margin-bottom:20px"/>
+        <p style="font-size:1.2em">
+            Present this invitation for FREE admission to <span style="font-weight:700;color:#039">Teachers Appreciation Night</span> at the <a href="http://www.hassayampainn.com/" target="_blank">Historic Hassayampa Inn</a> in Prescott, AZ on <br/><span style="font-weight:700">May 9th, 2014 from 6 - 9pm</span>.
+        </p>
+        <br/><br/>
+        <p style="font-size:1.4em">
+            <a href="#" target="_blank">
+                Download and Print Your Invitation »
+            </a>
+        </p>
     </div>
+{% endblock %}
+
+{% block splash_sponsors %}
+    <a href="http://kaff.gcmaz.com" target="_blank">
+        <img src="{{asset('images/flagstaff-radio-kaff-country.jpg')}}" width="167" height="86" alt="Flagstaff Radio - KAFF Country 92.9" class="centered img-responsive"/>
+    </a>
+    <a href="http://939themountain.gcmaz.com" target="_blank">
+        <img src="{{asset('images/flagstaff-radio-the-mountain.jpg')}}" width="116" height="100" alt="Flagstaff Radio - 93.9 The Mountain" class="centered img-responsive"/>
+    </a>
+    <a href="http://magic991.gcmaz.com" target="_blank">
+        <img src="{{asset('images/prescott-radio-magic.jpg')}}" width="156" height="82" alt="Prescott Radio - Magic 99.1" class="centered img-responsive"/>
+    </a>
+    <a href="http://funoldies.gcmaz.com" target="_blank">
+        <img src="{{asset('images/prescott-radio-oldies.jpg')}}" width="125" height="95" alt="Prescott Radio - Fun Oldies" class="centered img-responsive" />
+    </a>
 {% endblock %}

@@ -83,44 +83,30 @@
       
 {% block leftcol_logo %}
         <div class="logo_box">
-            <a href="{{ path('gcm_homepage') }}"><img src="{{ asset('images/logo-gcmaz.png') }}" width="300" height="108" alt="Great Circle Media Arizona" ></a>
+            <a href="{{ path('gcm_homepage') }}"><img src="{{ asset('images/logo-gcmaz.png') }}" width="300" height="108" alt="Great Circle Media Arizona" class="logo img-responsive" ></a>
         </div>
+        <p style="margin:2% auto;width:75%;font-size:0.8em;color:#8c9fb8;line-height:1.2;">
+            Great Circle Media serves Flagstaff, Prescott, Sedona, and all of Northern Arizona with today's Best Radio Stations
+       </p>
 {% endblock %}
 
 {% block footer %}
-    <div id="ftr">
-        <div id="ftr-gcm">
-            <a href="/"><img src="{{ asset('images/ftr-gcmaz-logo.png') }}" width="167" height="70" alt="Great Circle Media Arizona" style="padding-top:4px;"/></a>
-            <p style="color:#c7d1e1;font-size:12px;font-weight:bold;padding:0;margin:2px auto 0;">
-                Great Circle Media
-            </p>
-            <p style="color:#79818b;font-size:10px;font-weight:bold;padding:0;margin:2px auto;line-height:1.1;">
-                    &copy; GuyAnn Corporation<br/>All Rights Reserved
-            </p>
-            <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
-                <a href="{{path('gcm_homepage')}}admin/dashboard" style="color:#79818b;text-decoration:none;">Login &raquo;</a>
-                &nbsp; | &nbsp;
-                <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
-            </p>
-        </div>
-        <div id="ftr-cities">
-            <p class="unica" style="color:#79818b;font-size: 0.9em;padding-top:10px;">CITIES WE SERVE</p>
-            <div style="margin-top:5px;display:block;width:240px;">
-                <ul class="ftr-cities-list" style="float:left;width:90px;">
-                    <li>Flagstaff</li>
-                    <li>Prescott</li>
-                    <li>Sedona</li>
-                    <li>Williams</li>
-                </ul>
-                <ul class="ftr-cities-list" style="float:right;width:140px;text-align:left;">
-                    <li>Cottonwood</li>
-                    <li>Camp Verde</li>
-                    <li>Prescott Valley</li>
-                    <li>Winslow</li>
-                </ul>
-                <br class="clear" />
-            </div>
-        </div>
+<div id="ftr">
+    <p style="color:#8c9fb8;font-size:0.8em;padding:10px;margin:auto;">
+        Great Circle Media, 1117 W. Route 66, Flagstaff, AZ 86001
+    </p>
+    <div class="centered">
+        <a href="{{ path('gcm_homepage') }}"><img src="{{ asset('images/ftr-gcmaz-logo.png') }}" width="167" alt="Great Circle Media Arizona" style="height:auto;" ></a>
+        <p style="color:#79818b;font-size:10px;font-weight:bold;padding:0;margin:2px auto;line-height:1.1;">
+                &copy; Great Circle Media - All Rights Reserved
+        </p>
+        <p style="padding:0;margin:2px auto;font-weight:bold;font-size:10px;color:#79818b;">
+            <a href="http://www.gcmaz.com/legal/GeneralContestRules.pdf" target="_blank" style="color:#79818b;text-decoration:none;">Contest Rules</a>
+            &nbsp; | &nbsp;
+            <a href="http://www.gcmaz.com/legal/eeo.pdf" target="_blank"  style="color:#79818b;text-decoration:none;">EEO</a>
+            &nbsp; | &nbsp;
+            <a href="{{path('gcm_homepage')}}admin/dashboard" style="color:#79818b;text-decoration:none;">Login &raquo;</a>
+        </p>
     </div>
-    <br class="clear" />
+</div>
 {% endblock %}
