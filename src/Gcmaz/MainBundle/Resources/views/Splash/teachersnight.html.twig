@@ -1,7 +1,22 @@
 {% extends 'GcmazMainBundle::layout2.html.twig' %}
 
+{% block title %}Teacher's Appreciation Night - Prescott Arizona{% endblock %}
+
+{% block description %}
+<meta name="description" content="Teacher's Appreciation Night - Prescott Arizona" />
+<meta property="og:site_name" content="http://gcmaz.com" />
+<meta property="fb:app_id" content="651824251537122" />
+<meta property="og:type" content="greatcirclemedia:event" />
+<meta property="og:image" content="http://www.gcmaz.com{{ asset('images/splash/splash-teachers-appreciation-night.jpg') }}"/>
+<meta property="og:url" content="http://www.gcmaz.com{{ path('gcm_splash', {'splash': 'teachers-appreciation-night'}) }}"/>
+<meta property="og:title" content="Teacher's Appreciation Night - Prescott Arizona"/> 
+<meta property="og:description" content="Teacher's Appreciation Night - Prescott Arizona"/>
+<meta name="keywords" content="teachers appreciation night, prescott" />
+{% endblock %}
+
 {% block content %}
     <div class="splash arial">
+        <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_splash', {'splash':'teachers-appreciation-night'}) }}" colorscheme="light" data-send="true" data-width="600" data-show-faces="false" data-font="arial" style="margin:3px auto;padding:2px;"></div>
         <img src="{{asset('images/splash/teachers-app-night.jpg')}}" width="660" height="250" alt="Teachers Appreciation Night Prescott" class="img-responsive centered" style="margin-bottom:20px"/>
         <p style="font-size:1.2em">
             Present this invitation for FREE admission to <span style="font-weight:700;color:#039">Teachers Appreciation Night</span> at the <a href="http://www.hassayampainn.com/" target="_blank">Historic Hassayampa Inn</a> in Prescott, AZ on <br/><span style="font-weight:700">May 9th, 2014 from 6 - 9pm</span>.
