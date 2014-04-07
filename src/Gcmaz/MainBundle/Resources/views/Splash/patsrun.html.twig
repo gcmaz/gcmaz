@@ -1,10 +1,25 @@
 {% extends 'GcmazMainBundle::layout2.html.twig' %}
 
+{% block title %}Pat's Run 10th Anniversary - Flagstaff Shadow Run{% endblock %}
+
+{% block description %}
+<meta name="description" content="Pat's Run 10th Anniversary - Flagstaff Shadow Run" />
+<meta property="og:site_name" content="http://gcmaz.com" />
+<meta property="fb:app_id" content="651824251537122" />
+<meta property="og:type" content="greatcirclemedia:event" />
+<meta property="og:image" content="http://www.gcmaz.com{{ asset('images/splash/pats-run-flagstaff.jpg') }}"/>
+<meta property="og:url" content="http://www.gcmaz.com{{ path('gcm_splash', {'splash': 'pats-run-shadow-run-flagstaff'}) }}"/>
+<meta property="og:title" content="Pat's Run 10th Anniversary - Flagstaff Shadow Run"/> 
+<meta property="og:description" content="Pat's Run 10th Anniversary - Flagstaff Shadow Run"/>
+<meta name="keywords" content="pat's run, flagstaff shadow run" />
+{% endblock %}
+
 {% block content %}
     <div class="splash arial">
         <a href="http://asualumni.org/s/1469/alumni/index.aspx?sid=1469&gid=3&pgid=3342&content_id=3877" target="_blank">
             <img src="{{asset('images/splash/pats-run-flagstaff.jpg')}}" width="660" height="450" alt="Pat's Run Flagstaff Shadow Run" class="img-responsive centered" style="margin-bottom:20px"/>
         </a>
+        <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_splash', {'splash':'pats-run-shadow-run-flagstaff'}) }}" colorscheme="light" data-send="true" data-width="600" data-show-faces="false" data-font="arial" style="margin:3px auto;padding:2px;"></div>
         <section style="float:left;width:50%">
             <p>
                 On April 26, Pat Tillman Foundation and ASU Alumni Association will hold Shadow Runs nationwide.
@@ -51,5 +66,8 @@
     </a>
     <a href="http://azcentralcu.pwlanding.com/022/" target="_blank">
         <img src="{{asset('images/sponsors/az-central-credit-union.png')}}" width="170" height="auto" alt="Arizona Central Credit Union" class="centered img-responsive">
+    </a>
+    <a href="https://lo.primelending.com/flagstaff" target="_blank">
+        <img src="{{asset('images/sponsors/prime-lending.jpg')}}" width="170" height="auto" alt="Prime Lending" class="centered img-responsive">
     </a>
 {% endblock %}
