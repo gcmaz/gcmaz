@@ -11,13 +11,19 @@ class SplashController extends Controller
     public function splashAction($splash)
     {
         switch($splash){
-            // COULD RETURN LIST OF SPLASH PAGES
+            // DEFAULT - COULD RETURN LIST OF SPLASH PAGES
             case 'default' :
                 return $this->render('GcmazMainBundle:Splash:default.html.twig', array(
                     'splash' => $splash
                 ));
                         
-            //  TEACHERS APP NIGHT  
+            //  PATS RUN 
+            case 'pats-run-shadow-run-flagstaff' :
+                return $this->render('GcmazMainBundle:Splash:patsrun.html.twig', array(
+                    'splash' => $splash
+                ));
+                
+                //  TEACHERS APP NIGHT  
             case 'teachers-appreciation-night' :
                 return $this->render('GcmazMainBundle:Splash:teachersnight.html.twig', array(
                     'splash' => $splash
