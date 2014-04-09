@@ -130,7 +130,7 @@ img { height:auto; }
     float:right;
     border-left:2px solid #efefef;
 }
-#l2_rightcol a{margin:20px auto;text-decoration:none;display:block}
+#l2_rightcol a{margin:20px auto;text-decoration:none;display:block;max-width:190px}
 
 .splash{line-height:1.3;}
 .splash p {
