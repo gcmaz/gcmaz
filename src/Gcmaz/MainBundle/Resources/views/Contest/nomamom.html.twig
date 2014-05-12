@@ -52,13 +52,17 @@
 {% block content %}
     <div class="splash">
         <img src="{{('/images/splash/nom-a-mom.jpg')}}" width="1000" height="250" alt="Nom-a-Mom Nominate a Super-Mom for Mother's Day" class="centered img-responsive" />
-        {% for flashMessage in app.session.flashbag.get('nomamomnotice') %}
+        {# for flashMessage in app.session.flashbag.get('nomamomnotice') %}
             <div class="notice">
                 {{ flashMessage }}
             </div>
-        {% endfor %}
+        {% endfor #}
         <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_contest', {'contest':'nom-a-mom'}) }}" colorscheme="light" data-send="true" data-width="600" data-show-faces="false" data-font="arial" style="margin:10px;padding:0;"></div>
         <p style="font-size:1.2em;color:#000;padding:10px;">Do you know a Super-Mom?  Nominate her for our Super-Mom Contest where she will win a bunch of prizes showing her how much you appreciate her!</p>
+        <div>
+            <p>Winners to be announced!</p>
+            <p>Thank you for playing!</p>
+        </div>
         <div class="prizeinfo centered">
             <h4 class="red">Prize Includes:</h4>
             <p>$75 in Flowers from <a href="http://wattersgardencenter.com/" target="_blank">Watters Garden Center</a> <span style="font-size:0.5em;color:#4a7d86;">(Prescott Winner)</span></p>
