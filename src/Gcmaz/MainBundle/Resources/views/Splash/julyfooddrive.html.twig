@@ -1,0 +1,53 @@
+{% extends 'GcmazMainBundle::layout2.html.twig' %}
+
+{% block title %}July Food Drive Presented by Valley Honda Dealers{% endblock %}
+
+{% block description %}
+<meta name="description" content="July Food Drive Presented by Valley Honda Dealers" />
+<meta property="og:site_name" content="http://gcmaz.com" />
+<meta property="fb:app_id" content="651824251537122" />
+<meta property="og:type" content="greatcirclemedia:event" />
+<meta property="og:image" content="http://www.gcmaz.com{{ asset('images/splash/july-food-drive.jpg') }}"/>
+<meta property="og:url" content="http://www.gcmaz.com{{ path('gcm_splash', {'splash': 'july-food-drive'}) }}"/>
+<meta property="og:title" content="July Food Drive Presented by Valley Honda Dealers"/> 
+<meta property="og:description" content="July Food Drive Presented by Valley Honda Dealers to Help the Yavapai County Food Bank"/>
+<meta name="keywords" content="July food drive, Yavapai County Food Bank" />
+{% endblock %}
+
+{% block content %}
+    <div class="splash arial">
+        <div class="fb-like" data-href="http://www.gcmaz.com{{ path('gcm_splash', {'splash':'july-food-drive'}) }}" colorscheme="light" data-send="true" data-width="600" data-show-faces="false" data-font="arial" style="margin:3px auto;padding:2px;"></div>
+        <img src="{{asset('images/splash/july-food-drive.jpg')}}" width="660" height="379" usemap="#fooddrive" alt="July Food Drive Presented by Valley Honda Dealers" class="img-responsive centered" style="margin-bottom:20px"/>
+        <p style='font-size:1.4em;font-weight:600;text-decoration:underline;'>Drop off at any location below:</p>
+        <br/>
+        <ul style="width:30%;list-style-type:none;margin:0 auto;padding:0;display:inline-block;vertical-align: top;">
+            <li><a href="http://www.prescotthonda.com/" target="_blank"><img src="{{asset('images/sponsors/prescott-honda.jpg')}}" width="180" height="auto" style="margin-top:20px;"/></a></li>
+        </ul>
+        <ul style="width:30%;list-style-type:none;margin:0 auto;padding:0;display:inline-block;vertical-align: top;">
+            <li><a href="http://funoldies.gcmaz.com" target="_blank"><img src="{{asset('images/prescott-radio-oldies.jpg')}}" width="125" height="95" alt="Prescott Radio - Fun Oldies" /></a></li>
+            <li><a href="http://www.outboundfest.com/" target="_blank"><img src="{{asset('images/sponsors/outbound-music-fest.jpg')}}" width="200" height="auto" style="height:auto;padding-top:40px" /></a></li>
+        </ul>
+         <ul style="width:30%;list-style-type:none;margin:0 auto;padding:0;display:inline-block;vertical-align: top;">
+             <li><a href="http://magic991.gcmaz.com" target="_blank"><img src="{{asset('images/prescott-radio-magic.jpg')}}" width="156" height="82" alt="Prescott Radio - Magic 99.1"style="margin-top:10px;"/></a></li>
+             <li>{#<a href="http://www.papajohns.com" target="_blank"><img src="{{asset('images/sponsors/papa-johns.jpg')}}" width="130" height="auto" style="height:auto;padding-top:15px"/></a>#}</li>
+        </ul>
+        <map name='fooddrive' id='fooddrive'>
+            <area shape="rect" coords="160,175,500,275" alt="Presented by Valley Honda Dealers" href="http://www.valleyhondadealers.com/" target="_blank" />
+        </map>
+    </div>
+{% endblock %}
+
+{% block layout2_rightcol %}
+    <a href="http://kaff.gcmaz.com" target="_blank">
+        <img src="{{asset('images/flagstaff-radio-kaff-country.jpg')}}" width="167" height="86" alt="Flagstaff Radio - KAFF Country 92.9" class="centered img-responsive"/>
+    </a>
+    <a href="http://939themountain.gcmaz.com" target="_blank">
+        <img src="{{asset('images/flagstaff-radio-the-mountain.jpg')}}" width="116" height="100" alt="Flagstaff Radio - 93.9 The Mountain" class="centered img-responsive"/>
+    </a>
+    <a href="http://magic991.gcmaz.com" target="_blank">
+        <img src="{{asset('images/prescott-radio-magic.jpg')}}" width="156" height="82" alt="Prescott Radio - Magic 99.1" class="centered img-responsive"/>
+    </a>
+    <a href="http://funoldies.gcmaz.com" target="_blank">
+        <img src="{{asset('images/prescott-radio-oldies.jpg')}}" width="125" height="95" alt="Prescott Radio - Fun Oldies" class="centered img-responsive" />
+    </a>
+{% endblock %}

@@ -16,6 +16,13 @@ class SplashController extends Controller
                 return $this->render('GcmazMainBundle:Splash:default.html.twig', array(
                     'splash' => $splash
                 ));
+	    
+	    // JULY FOOD DRIVE
+            case 'july-food-drive' :
+                return $this->render('GcmazMainBundle:Splash:julyfooddrive.html.twig', array(
+                    'splash' => $splash
+                ));
+
                         
             //  PATS RUN 
             case 'pats-run-shadow-run-flagstaff' :
